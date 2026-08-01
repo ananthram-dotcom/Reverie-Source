@@ -24,10 +24,24 @@ const Home = () => {
         />
       </Helmet>
 
-      <div className="space-y-20 pb-20">
+      <div className="space-y-24 pb-24">
         
-        {/* HERO SECTION */}
-        <section className="relative pt-32 pb-20 overflow-hidden border-b border-reverie-brass/15 bg-[#18121E]">
+        {/* HERO SECTION WITH VINTAGE PORTRAIT BACKGROUND */}
+        <section className="relative min-h-[88vh] flex items-center justify-center pt-32 pb-24 overflow-hidden border-b border-reverie-brass/20">
+          
+          {/* Selective Vintage Blurred Portrait Background Layer */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <img
+              src="/images/billiards_hero_portrait.png"
+              alt="Vintage Billiards Hall Ambient"
+              className="w-full h-full object-cover object-center scale-105 filter blur-[4px] brightness-[0.38] contrast-[1.15]"
+            />
+            {/* Soft Dark Vignette & Gradient Overlays for High Contrast Readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-reverie-darkwalnut via-reverie-darkwalnut/75 to-reverie-darkwalnut/90" />
+            <div className="absolute inset-0 bg-gradient-to-r from-reverie-darkwalnut/90 via-transparent to-reverie-darkwalnut/90" />
+          </div>
+
+          {/* Hero Content */}
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-7 relative z-10">
             
             {/* Tagline Badge */}
@@ -35,7 +49,7 @@ const Home = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-reverie-felt/30 border border-reverie-feltlight/50 text-emerald-300 text-xs font-sans font-semibold tracking-widest uppercase"
+              className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-reverie-darkwalnut/80 border border-reverie-brass/40 text-emerald-300 text-xs font-sans font-semibold tracking-widest uppercase backdrop-blur-md shadow-sm"
             >
               <Disc className="w-3.5 h-3.5 text-reverie-brass" />
               <span>Est. 1928 • Heritage Cueist Apparel</span>
@@ -46,7 +60,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="text-4xl sm:text-6xl font-serif font-bold text-reverie-cream tracking-tight leading-[1.15]"
+              className="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold text-reverie-cream tracking-tight leading-[1.12] drop-shadow-lg"
             >
               Timeless Billiards Apparel Crafted with <span className="text-reverie-brass italic">Exacting Geometry</span>
             </motion.h1>
@@ -56,7 +70,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-base sm:text-lg text-reverie-cream/80 max-w-2xl mx-auto leading-relaxed font-sans"
+              className="text-base sm:text-xl text-reverie-cream/90 max-w-2xl mx-auto leading-relaxed font-sans font-normal drop-shadow-sm"
             >
               Where the nostalgia of 1920s slate-and-felt halls meets modern minimalist style. Built for players who demand unyielding precision.
             </motion.p>
@@ -66,18 +80,18 @@ const Home = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.45 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3"
             >
               <Link
                 to="/products"
-                className="w-full sm:w-auto px-7 py-3.5 bg-reverie-brass text-reverie-darkwalnut font-serif font-bold text-sm rounded-lg hover:bg-reverie-gold transition-colors flex items-center justify-center space-x-2 cursor-pointer shadow-sm"
+                className="w-full sm:w-auto px-8 py-4 bg-reverie-brass text-reverie-darkwalnut font-serif font-bold text-base rounded-xl hover:bg-reverie-gold transition-colors flex items-center justify-center space-x-2 cursor-pointer shadow-md"
               >
                 <span>Shop Heritage Merch</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4.5 h-4.5" />
               </Link>
               <Link
                 to="/about"
-                className="w-full sm:w-auto px-7 py-3.5 bg-reverie-card border border-reverie-brass/30 text-reverie-cream hover:border-reverie-brass font-serif font-semibold text-sm rounded-lg transition-colors flex items-center justify-center space-x-2"
+                className="w-full sm:w-auto px-8 py-4 bg-reverie-darkwalnut/80 border border-reverie-brass/40 text-reverie-cream hover:border-reverie-brass font-serif font-semibold text-base rounded-xl backdrop-blur-md transition-colors flex items-center justify-center space-x-2"
               >
                 <span>The Reverie Story</span>
               </Link>
@@ -94,7 +108,7 @@ const Home = () => {
             <h2 className="text-2xl sm:text-4xl font-serif font-bold text-reverie-cream">
               Precision in Every Thread & Seam
             </h2>
-            <p className="text-xs sm:text-sm text-reverie-cream/70">
+            <p className="text-xs sm:text-sm text-reverie-cream/75">
               Billiards is a game of millimeters. We apply that exact discipline to fabric weight, brass hardware, and embroidered graphics.
             </p>
           </div>
@@ -151,7 +165,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* BRAND STORY TEASER CARD */}
+        {/* BRAND STORY TEASER CARD WITH PORTRAIT IMAGE */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-reverie-card rounded-2xl border border-reverie-brass/25 p-8 md:p-12 shadow-sm relative overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -177,7 +191,7 @@ const Home = () => {
               </div>
 
               <div className="lg:col-span-5 flex justify-center">
-                <div className="w-60 h-60 sm:w-72 sm:h-72 rounded-xl overflow-hidden border border-reverie-brass/30">
+                <div className="w-60 h-60 sm:w-72 sm:h-72 rounded-xl overflow-hidden border border-reverie-brass/30 shadow-md">
                   <img
                     src="/images/billiards_table_slate_mahogany.png"
                     alt="Vintage Billiards Table"
@@ -223,7 +237,7 @@ const Home = () => {
 
         {/* REPEATED NEWSLETTER CTA BANNER */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-reverie-card border border-reverie-brass/25 p-8 sm:p-10 rounded-2xl text-center max-w-3xl mx-auto space-y-5">
+          <div className="bg-reverie-card border border-reverie-brass/25 p-8 sm:p-10 rounded-2xl text-center max-w-3xl mx-auto space-y-5 shadow-sm">
             <div className="w-10 h-10 rounded-full bg-reverie-felt/40 border border-reverie-feltlight flex items-center justify-center mx-auto text-emerald-300">
               <Disc className="w-5 h-5" />
             </div>

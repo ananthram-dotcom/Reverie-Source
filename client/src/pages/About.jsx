@@ -15,31 +15,43 @@ const About = () => {
         />
       </Helmet>
 
-      <div className="pt-28 pb-20 space-y-20">
+      <div className="space-y-24 pb-24">
         
-        {/* Minimalist Header */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-reverie-felt/30 border border-reverie-feltlight/50 text-emerald-300 text-[11px] font-sans font-semibold tracking-widest uppercase"
-          >
-            <Disc className="w-3.5 h-3.5 text-reverie-brass" />
-            <span>The Geometry of the Game</span>
-          </motion.div>
+        {/* Minimalist Header with Selective Vintage Portrait Backdrop */}
+        <section className="relative pt-36 pb-20 overflow-hidden border-b border-reverie-brass/20">
+          {/* Selective Vintage Blurred Portrait Background Layer */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <img
+              src="/images/billiards_hero_portrait.png"
+              alt="Vintage Billiards Hall Ambient"
+              className="w-full h-full object-cover object-center scale-105 filter blur-[4px] brightness-[0.35] contrast-[1.15]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-reverie-darkwalnut via-reverie-darkwalnut/80 to-reverie-darkwalnut/90" />
+          </div>
 
-          <h1 className="text-3xl sm:text-5xl font-serif font-bold text-reverie-cream tracking-tight leading-tight">
-            Crafting Heritage Merch for Players Who Respect the Table
-          </h1>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-reverie-darkwalnut/80 border border-reverie-brass/40 text-emerald-300 text-[11px] font-sans font-semibold tracking-widest uppercase backdrop-blur-md"
+            >
+              <Disc className="w-3.5 h-3.5 text-reverie-brass" />
+              <span>The Geometry of the Game</span>
+            </motion.div>
 
-          <p className="text-sm sm:text-base text-reverie-cream/80 max-w-2xl mx-auto leading-relaxed font-sans">
-            Reverie was founded to rescue cue sports apparel from cheap novelty graphics. We design heavyweight 480gsm cotton goods and solid brass accessories with the line discipline of a championship bank shot.
-          </p>
+            <h1 className="text-3xl sm:text-5xl font-serif font-bold text-reverie-cream tracking-tight leading-tight drop-shadow-md">
+              Crafting Heritage Merch for Players Who Respect the Table
+            </h1>
+
+            <p className="text-sm sm:text-base text-reverie-cream/90 max-w-2xl mx-auto leading-relaxed font-sans font-normal">
+              Reverie was founded to rescue cue sports apparel from cheap novelty graphics. We design heavyweight 480gsm cotton goods and solid brass accessories with the line discipline of a championship bank shot.
+            </p>
+          </div>
         </section>
 
         {/* Narrative & Craft Card */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-reverie-card rounded-2xl border border-reverie-brass/25 p-8 lg:p-14 shadow-md">
+          <div className="bg-reverie-card rounded-2xl border border-reverie-brass/25 p-8 lg:p-14 shadow-sm">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               
               <div className="lg:col-span-6 space-y-5">

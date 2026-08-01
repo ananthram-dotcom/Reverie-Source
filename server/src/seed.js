@@ -21,10 +21,9 @@ const sampleProducts = [
       'High-density felt applique chest design',
       'Pre-shrunk vintage wash for heritage drape'
     ],
-    image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80',
+    image: '/images/cueist_heavyweight_hoodie.png',
     additionalImages: [
-      'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80'
+      '/images/cueist_heavyweight_hoodie.png'
     ],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     inStock: true,
@@ -44,9 +43,9 @@ const sampleProducts = [
       'Heavyweight 85g tactile feel',
       'Includes custom velvet pouch & certificate'
     ],
-    image: 'https://images.unsplash.com/photo-1611591475777-233cd7a772b3?auto=format&fit=crop&w=800&q=80',
+    image: '/images/solid_brass_8ball_pendant.png',
     additionalImages: [
-      'https://images.unsplash.com/photo-1611591475777-233cd7a772b3?auto=format&fit=crop&w=800&q=80'
+      '/images/solid_brass_8ball_pendant.png'
     ],
     sizes: ['One Size'],
     inStock: true,
@@ -66,9 +65,9 @@ const sampleProducts = [
       'Antique brass buckle closure',
       'Deep purple velvet inner sweatband'
     ],
-    image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80',
+    image: '/images/felt_chalk_vintage_cap.png',
     additionalImages: [
-      'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80'
+      '/images/felt_chalk_vintage_cap.png'
     ],
     sizes: ['Adjustable'],
     inStock: true,
@@ -88,11 +87,55 @@ const sampleProducts = [
       'Custom Reverie hem tag in gold thread',
       'Relaxed boxy fit'
     ],
-    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
+    image: '/images/angle_of_incidence_tee.png',
     additionalImages: [
-      'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80'
+      '/images/angle_of_incidence_tee.png'
     ],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    inStock: true,
+  },
+  {
+    slug: 'walnut-rack-leather-cue-case',
+    name: 'Walnut & Full-Grain Leather Cue Companion Bag',
+    category: 'Accessories',
+    price: 145.00,
+    rating: 5.0,
+    reviewsCount: 19,
+    badge: 'Signature',
+    description: 'Handcrafted full-grain cognac leather carrying pouch for extension chalk, tip shapers, and personal accessories.',
+    details: [
+      'Full-grain vegetable-tanned leather',
+      'Solid brass YKK zipper',
+      'Embossed Reverie crown emblem',
+      'Suede-lined protective interior'
+    ],
+    image: '/images/leather_cue_companion_bag.png',
+    additionalImages: [
+      '/images/leather_cue_companion_bag.png'
+    ],
+    sizes: ['One Size'],
+    inStock: true,
+  },
+  {
+    slug: 'break-shot-oversized-crewneck',
+    name: '1980s Break-Shot Heavyweight Crewneck',
+    category: 'Hoodies',
+    price: 82.00,
+    rating: 4.7,
+    reviewsCount: 27,
+    badge: 'Limited Drop',
+    description: 'Retro tournament styling with plush fleece lining, cream ribbed collar, and golden cue ball chest patch.',
+    details: [
+      '420 GSM Organic Fleece Cotton',
+      'Ribbed side expansion panels',
+      'Gold foil stamp branding on left sleeve',
+      'V-stitch vintage neckline collar'
+    ],
+    image: '/images/break_shot_crewneck.png',
+    additionalImages: [
+      '/images/break_shot_crewneck.png'
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
     inStock: true,
   }
 ];
@@ -106,7 +149,7 @@ const sampleBlogs = [
     author: 'Julian Vance',
     readTime: '5 min read',
     date: 'August 1, 2026',
-    image: 'https://images.unsplash.com/photo-1534158914592-062992fbe900?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/billiards_journal_geometry.png',
     content: `
       <p class="lead">Billiards is not a game of luck. It is applied physics, spatial geometry, and unwavering nerve disguised as recreation.</p>
       <h3>The Mirror Formula</h3>
@@ -122,7 +165,7 @@ const sampleBlogs = [
     author: 'Eleanor Sterling',
     readTime: '7 min read',
     date: 'July 24, 2026',
-    image: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/billiards_table_slate_mahogany.png',
     content: `
       <p>In 1928, entering a high-stakes billiards parlor was like entering a cathedral of precision. The low hum of shaded green glass pendants over slate tables created an atmosphere where quiet concentration reigned supreme.</p>
     `

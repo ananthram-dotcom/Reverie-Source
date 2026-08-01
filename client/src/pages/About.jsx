@@ -74,7 +74,7 @@ const About = () => {
               <div className="lg:col-span-6">
                 <div className="relative rounded-2xl overflow-hidden border border-reverie-brass/50 shadow-brass">
                   <img
-                    src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1000&q=80"
+                    src="/images/billiards_table_slate_mahogany.png"
                     alt="Billiards Hall Craftsmanship"
                     className="w-full h-auto object-cover"
                   />

@@ -15,10 +15,9 @@ export const MOCK_PRODUCTS = [
       'High-density felt applique chest design',
       'Pre-shrunk vintage wash for heritage drape'
     ],
-    image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80',
+    image: '/images/cueist_heavyweight_hoodie.png',
     additionalImages: [
-      'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80'
+      '/images/cueist_heavyweight_hoodie.png'
     ],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     inStock: true,
@@ -39,9 +38,9 @@ export const MOCK_PRODUCTS = [
       'Heavyweight 85g tactile feel',
       'Includes custom velvet pouch & certificate'
     ],
-    image: 'https://images.unsplash.com/photo-1611591475777-233cd7a772b3?auto=format&fit=crop&w=800&q=80',
+    image: '/images/solid_brass_8ball_pendant.png',
     additionalImages: [
-      'https://images.unsplash.com/photo-1611591475777-233cd7a772b3?auto=format&fit=crop&w=800&q=80'
+      '/images/solid_brass_8ball_pendant.png'
     ],
     sizes: ['One Size'],
     inStock: true,
@@ -62,9 +61,9 @@ export const MOCK_PRODUCTS = [
       'Antique brass buckle closure',
       'Deep purple velvet inner sweatband'
     ],
-    image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80',
+    image: '/images/felt_chalk_vintage_cap.png',
     additionalImages: [
-      'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80'
+      '/images/felt_chalk_vintage_cap.png'
     ],
     sizes: ['Adjustable'],
     inStock: true,
@@ -85,9 +84,9 @@ export const MOCK_PRODUCTS = [
       'Custom Reverie hem tag in gold thread',
       'Relaxed boxy fit'
     ],
-    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
+    image: '/images/angle_of_incidence_tee.png',
     additionalImages: [
-      'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80'
+      '/images/angle_of_incidence_tee.png'
     ],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     inStock: true,
@@ -108,9 +107,9 @@ export const MOCK_PRODUCTS = [
       'Embossed Reverie crown emblem',
       'Suede-lined protective interior'
     ],
-    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80',
+    image: '/images/leather_cue_companion_bag.png',
     additionalImages: [
-      'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80'
+      '/images/leather_cue_companion_bag.png'
     ],
     sizes: ['One Size'],
     inStock: true,
@@ -131,9 +130,9 @@ export const MOCK_PRODUCTS = [
       'Gold foil stamp branding on left sleeve',
       'V-stitch vintage neckline collar'
     ],
-    image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80',
+    image: '/images/break_shot_crewneck.png',
     additionalImages: [
-      'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80'
+      '/images/break_shot_crewneck.png'
     ],
     sizes: ['S', 'M', 'L', 'XL'],
     inStock: true,
@@ -150,7 +149,7 @@ export const MOCK_BLOGS = [
     author: 'Julian Vance',
     readTime: '5 min read',
     date: 'August 1, 2026',
-    image: 'https://images.unsplash.com/photo-1534158914592-062992fbe900?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/billiards_journal_geometry.png',
     content: `
       <p class="lead">Billiards is not a game of luck. It is applied physics, spatial geometry, and unwavering nerve disguised as recreation.</p>
       
@@ -172,7 +171,7 @@ export const MOCK_BLOGS = [
     author: 'Eleanor Sterling',
     readTime: '7 min read',
     date: 'July 24, 2026',
-    image: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/billiards_table_slate_mahogany.png',
     content: `
       <p>In 1928, entering a high-stakes billiards parlor was like entering a cathedral of precision. The low hum of shaded green glass pendants over slate tables created an atmosphere where quiet concentration reigned supreme.</p>
 
@@ -189,7 +188,7 @@ export const MOCK_BLOGS = [
     author: 'Marcus Reed',
     readTime: '4 min read',
     date: 'July 15, 2026',
-    image: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/angle_of_incidence_tee.png',
     content: `
       <p>Styling vintage merch doesn’t mean dressing like a costume extra. It is about contrast: pair heavy structured garments with relaxed denim or tailored trousers for an effortless look.</p>
     `

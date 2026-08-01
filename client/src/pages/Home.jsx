@@ -185,7 +185,7 @@ const Home = () => {
               <div className="lg:col-span-5 flex justify-center">
                 <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden border-2 border-reverie-brass/50 shadow-brass group">
                   <img
-                    src="https://images.unsplash.com/photo-1534158914592-062992fbe900?auto=format&fit=crop&w=800&q=80"
+                    src="/images/billiards_table_slate_mahogany.png"
                     alt="Vintage Billiards Table"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />

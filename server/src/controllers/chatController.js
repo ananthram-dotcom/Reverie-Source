@@ -42,8 +42,8 @@ export const handleChat = async (req, res) => {
     const genAI = new GoogleGenerativeAI(apiKey);
     let replyText = '';
 
-    // Try live Google Gemini API first
-    const modelsToTry = ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-pro'];
+    // Try live Google Gemini API with supported models
+    const modelsToTry = ['gemini-3.6-flash', 'gemini-3.5-flash', 'gemini-3.5-flash-lite', 'gemini-omni-flash-preview', 'gemini-2.5-flash'];
     let success = false;
 
     for (const modelName of modelsToTry) {
@@ -57,10 +57,13 @@ export const handleChat = async (req, res) => {
         });
         const result = await chatSession.sendMessage(message);
         replyText = result.response.text();
-        success = true;
-        break;
+        if (replyText) {
+          success = true;
+          console.log(`✨ Live Google Gemini response generated using model: ${modelName}`);
+          break;
+        }
       } catch (e) {
-        // Try next model if specified model fails
+        console.warn(`Model ${modelName} failed, trying next:`, e.message);
       }
     }
 

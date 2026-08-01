@@ -11,11 +11,13 @@ import LookbookGallery from '../components/LookbookGallery';
 import ManifestoBlock from '../components/ManifestoBlock';
 import ReverieLogo from '../components/ReverieLogo';
 import { MOCK_PRODUCTS, MOCK_BLOGS } from '../data/mockData';
-import { ArrowRight, Disc } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Home = () => {
-  const featuredProducts = MOCK_PRODUCTS.slice(0, 4);
+  // Select DISTINCT non-overlapping slices for each section to avoid repetition!
+  const blueprintItems = MOCK_PRODUCTS.slice(0, 4);      // Items 1-4
+  const featuredLedgerItems = MOCK_PRODUCTS.slice(4, 8); // Items 5-8 (Distinct!)
   const featuredBlogs = MOCK_BLOGS.slice(0, 2);
 
   return (
@@ -28,7 +30,7 @@ const Home = () => {
         />
       </Helmet>
 
-      <div className="space-y-20 pb-24">
+      <div className="space-y-24 pb-24">
         
         {/* HERO SECTION WITH VINTAGE PORTRAIT BACKGROUND */}
         <section className="relative min-h-[88vh] flex items-center justify-center pt-32 pb-24 overflow-hidden border-b border-reverie-brass/20">
@@ -106,17 +108,17 @@ const Home = () => {
         {/* MARQUEE ANNOUNCEMENT TICKER */}
         <MarqueeTicker />
 
-        {/* INTERACTIVE MERCH BLUEPRINT INSPECTION */}
+        {/* INTERACTIVE MERCH BLUEPRINT INSPECTION (ITEMS 1-4) */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlueprintBreakdown />
+          <BlueprintBreakdown items={blueprintItems} />
         </section>
 
-        {/* FEATURED PRODUCTS DROPS */}
+        {/* FEATURED PRODUCTS DROPS (ITEMS 5-8 - NON-REPEATING!) */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-end justify-between mb-8 border-b border-reverie-brass/15 pb-4 gap-4">
             <div>
               <span className="text-[11px] font-sans font-bold text-reverie-brass tracking-widest uppercase block mb-1">
-                Curated Collection
+                Curated Drop Spotlight
               </span>
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-reverie-cream">
                 Quarterly Drop Ledger
@@ -126,13 +128,13 @@ const Home = () => {
               to="/products"
               className="text-xs font-bold text-reverie-brass hover:text-reverie-gold flex items-center space-x-1.5 transition-colors uppercase tracking-wider"
             >
-              <span>View Full Catalog</span>
+              <span>View All 12 Ledger Drops</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product, idx) => (
+            {featuredLedgerItems.map((product, idx) => (
               <ProductCard key={product.id} product={product} index={idx} />
             ))}
           </div>

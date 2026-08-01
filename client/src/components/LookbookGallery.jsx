@@ -5,28 +5,28 @@ import { Link } from 'react-router-dom';
 const LookbookGallery = () => {
   const lookbookItems = [
     {
-      title: 'Frame 01 — 480GSM French Terry',
-      subtitle: 'The Cueist Hoodie in Deep Purple',
-      image: '/images/cueist_heavyweight_hoodie.png',
-      tag: 'DROP 01'
+      title: 'Frame 01 — Corner Bank Shot Hoodie',
+      subtitle: '480GSM Cream French Terry',
+      image: '/images/bank_shot_cream_hoodie.png',
+      tag: 'NEW DROP'
     },
     {
-      title: 'Frame 02 — Solid Brass 8-Ball',
-      subtitle: 'Laser-Etched C36000 Brass',
-      image: '/images/solid_brass_8ball_pendant.png',
-      tag: 'HARDWARE'
+      title: 'Frame 02 — Slate Leather Companion Clip',
+      subtitle: 'Cognac Leather & Brass Clip',
+      image: '/images/leather_chalk_holder.png',
+      tag: 'ACCESSORY'
     },
     {
-      title: 'Frame 03 — Slate & Felt Lookbook',
-      subtitle: 'Reverie Cueist at the Brunswick Table',
+      title: 'Frame 03 — 9-Ball Corduroy Trucker',
+      subtitle: 'Deep Purple Corduroy & Brass Buttons',
+      image: '/images/corduroy_trucker_jacket.png',
+      tag: 'OUTERWEAR'
+    },
+    {
+      title: 'Frame 04 — Cueist Hall Lifestyle',
+      subtitle: 'Reverie Apparel on the Brunswick Table',
       image: '/images/billiards_lookbook_lifestyle.png',
       tag: 'ARCHIVAL'
-    },
-    {
-      title: 'Frame 04 — Angle of Incidence Tee',
-      subtitle: '240GSM Combed Cotton Graphic',
-      image: '/images/angle_of_incidence_tee.png',
-      tag: 'TEES'
     }
   ];
 
@@ -49,12 +49,12 @@ const LookbookGallery = () => {
           to="/products"
           className="text-xs font-bold text-reverie-brass hover:text-reverie-gold flex items-center space-x-1.5 transition-colors uppercase tracking-wider"
         >
-          <span>Explore All Drops</span>
+          <span>Explore All 12 Drops</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
       </div>
 
-      {/* Horizontal Scroll / Grid Spread */}
+      {/* Horizontal Grid Spread */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {lookbookItems.map((item, idx) => (
           <div

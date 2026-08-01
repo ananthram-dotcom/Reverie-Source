@@ -16,9 +16,7 @@ export const MOCK_PRODUCTS = [
       'Pre-shrunk vintage wash for heritage drape'
     ],
     image: '/images/cueist_heavyweight_hoodie.png',
-    additionalImages: [
-      '/images/cueist_heavyweight_hoodie.png'
-    ],
+    additionalImages: ['/images/cueist_heavyweight_hoodie.png'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     inStock: true,
   },
@@ -39,9 +37,7 @@ export const MOCK_PRODUCTS = [
       'Includes custom velvet pouch & certificate'
     ],
     image: '/images/solid_brass_8ball_pendant.png',
-    additionalImages: [
-      '/images/solid_brass_8ball_pendant.png'
-    ],
+    additionalImages: ['/images/solid_brass_8ball_pendant.png'],
     sizes: ['One Size'],
     inStock: true,
   },
@@ -62,9 +58,7 @@ export const MOCK_PRODUCTS = [
       'Deep purple velvet inner sweatband'
     ],
     image: '/images/felt_chalk_vintage_cap.png',
-    additionalImages: [
-      '/images/felt_chalk_vintage_cap.png'
-    ],
+    additionalImages: ['/images/felt_chalk_vintage_cap.png'],
     sizes: ['Adjustable'],
     inStock: true,
   },
@@ -85,9 +79,7 @@ export const MOCK_PRODUCTS = [
       'Relaxed boxy fit'
     ],
     image: '/images/angle_of_incidence_tee.png',
-    additionalImages: [
-      '/images/angle_of_incidence_tee.png'
-    ],
+    additionalImages: ['/images/angle_of_incidence_tee.png'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     inStock: true,
   },
@@ -108,9 +100,7 @@ export const MOCK_PRODUCTS = [
       'Suede-lined protective interior'
     ],
     image: '/images/leather_cue_companion_bag.png',
-    additionalImages: [
-      '/images/leather_cue_companion_bag.png'
-    ],
+    additionalImages: ['/images/leather_cue_companion_bag.png'],
     sizes: ['One Size'],
     inStock: true,
   },
@@ -131,10 +121,134 @@ export const MOCK_PRODUCTS = [
       'V-stitch vintage neckline collar'
     ],
     image: '/images/break_shot_crewneck.png',
-    additionalImages: [
-      '/images/break_shot_crewneck.png'
-    ],
+    additionalImages: ['/images/break_shot_crewneck.png'],
     sizes: ['S', 'M', 'L', 'XL'],
+    inStock: true,
+  },
+  {
+    id: 'prod-7',
+    slug: '9-ball-break-corduroy-jacket',
+    name: 'The 9-Ball Break Vintage Corduroy Trucker Jacket',
+    category: 'Hoodies',
+    price: 135.00,
+    rating: 5.0,
+    reviewsCount: 14,
+    badge: 'Signature',
+    description: 'Heavyweight deep purple cotton corduroy trucker jacket with green felt interior collar lining and custom aged brass branded buttons.',
+    details: [
+      '10-Wale 100% Cotton Corduroy',
+      'Green billiards felt under-collar lining',
+      'Custom embossed brass shank buttons',
+      'Interior pocket for chalk & tip tool'
+    ],
+    image: '/images/corduroy_trucker_jacket.png',
+    additionalImages: ['/images/corduroy_trucker_jacket.png'],
+    sizes: ['M', 'L', 'XL', '2XL'],
+    inStock: true,
+  },
+  {
+    id: 'prod-8',
+    slug: 'slate-cognac-leather-chalk-holder',
+    name: 'Slate & Cognac Leather Chalk Companion Clip',
+    category: 'Accessories',
+    price: 28.00,
+    rating: 4.9,
+    reviewsCount: 41,
+    badge: 'Bestseller',
+    description: 'Full-grain cognac leather magnetic chalk pouch featuring a solid brass belt clip and hand-burnished edges.',
+    details: [
+      'Full-grain vegetable-tanned leather',
+      'Heavy-duty magnetic chalk retainer',
+      'Solid brass belt/pocket clip',
+      'Includes 1 cube of Reverie Master chalk'
+    ],
+    image: '/images/leather_chalk_holder.png',
+    additionalImages: ['/images/leather_chalk_holder.png'],
+    sizes: ['One Size'],
+    inStock: true,
+  },
+  {
+    id: 'prod-9',
+    slug: 'bank-shot-cream-graphic-hoodie',
+    name: 'Corner Pocket Bank Shot Cream French Terry Hoodie',
+    category: 'Hoodies',
+    price: 92.00,
+    rating: 4.9,
+    reviewsCount: 36,
+    badge: 'New Drop',
+    description: 'Ultra-heavy 480gsm cream cotton hoodie with an intricate deep purple and gold vector diagram of a 3-rail corner bank shot printed on back.',
+    details: [
+      '480 GSM Heavyweight Organic French Terry',
+      'Discharge ink back print for soft handfeel',
+      'Custom brass eyelets & aglets',
+      'Relaxed vintage drop-shoulder fit'
+    ],
+    image: '/images/bank_shot_cream_hoodie.png',
+    additionalImages: ['/images/bank_shot_cream_hoodie.png'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    inStock: true,
+  },
+  {
+    id: 'prod-10',
+    slug: 'brunswick-hall-archival-print-tee',
+    name: '1928 Brunswick Hall Archival Blueprint Tee',
+    category: 'T-Shirts',
+    price: 52.00,
+    rating: 4.8,
+    reviewsCount: 22,
+    badge: 'Popular',
+    description: 'Washed deep purple combed cotton tee with vintage 1928 billiards table technical drafting print on chest.',
+    details: [
+      '240 GSM Heavyweight Combed Cotton',
+      'Vintage enzyme wash for soft drape',
+      'Gold thread woven Reverie neck label',
+      'Reinforced shoulder-to-shoulder taping'
+    ],
+    image: '/images/angle_of_incidence_tee.png',
+    additionalImages: ['/images/angle_of_incidence_tee.png'],
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    inStock: true,
+  },
+  {
+    id: 'prod-11',
+    slug: 'cueist-heritage-green-strapback',
+    name: 'Cueist Heritage Felt & Brass Strapback',
+    category: 'Headwear',
+    price: 45.00,
+    rating: 4.9,
+    reviewsCount: 18,
+    badge: 'Limited Drop',
+    description: 'Unstructured dark green twill cap featuring green felt under-brim and custom aged brass emblem buckle closure.',
+    details: [
+      'Washed heavy cotton twill construction',
+      'Real green felt under-visor accent',
+      'Custom brass Reverie emblem slide buckle',
+      'Moisture-wicking inner band'
+    ],
+    image: '/images/felt_chalk_vintage_cap.png',
+    additionalImages: ['/images/felt_chalk_vintage_cap.png'],
+    sizes: ['Adjustable'],
+    inStock: true,
+  },
+  {
+    id: 'prod-12',
+    slug: 'championship-brass-pocket-marker',
+    name: '1928 Championship Solid Brass Pocket Marker',
+    category: 'Accessories',
+    price: 34.00,
+    rating: 5.0,
+    reviewsCount: 29,
+    badge: 'Signature',
+    description: 'Heavyweight solid brass tournament pocket marker coin with laser-engraved Reverie crown and 8-ball geometry.',
+    details: [
+      '100% C36000 Solid Aged Brass',
+      'Heavyweight 65g tactile handfeel',
+      'Laser-etched bank shot markings',
+      'Includes custom velvet pouch'
+    ],
+    image: '/images/solid_brass_8ball_pendant.png',
+    additionalImages: ['/images/solid_brass_8ball_pendant.png'],
+    sizes: ['One Size'],
     inStock: true,
   }
 ];

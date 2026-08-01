@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { MOCK_PRODUCTS } from '../data/mockData';
-import { ArrowRight, Check, Compass, Layers, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Check, Compass, Layers } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const BlueprintBreakdown = () => {
+const BlueprintBreakdown = ({ items }) => {
+  const products = items && items.length > 0 ? items : MOCK_PRODUCTS.slice(0, 4);
   const [selectedIdx, setSelectedIdx] = useState(0);
-  const activeProduct = MOCK_PRODUCTS[selectedIdx] || MOCK_PRODUCTS[0];
+  const activeProduct = products[selectedIdx] || products[0];
 
   return (
     <div className="bg-reverie-card rounded-2xl border border-reverie-brass/25 p-6 sm:p-12 shadow-md relative overflow-hidden">
@@ -25,7 +26,7 @@ const BlueprintBreakdown = () => {
 
         {/* Tab selector */}
         <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 no-scrollbar">
-          {MOCK_PRODUCTS.slice(0, 4).map((p, idx) => (
+          {products.map((p, idx) => (
             <button
               key={p.id}
               onClick={() => setSelectedIdx(idx)}
@@ -75,7 +76,7 @@ const BlueprintBreakdown = () => {
           <div className="lg:col-span-6 space-y-5">
             <div>
               <span className="text-[10px] font-sans font-bold text-reverie-brass uppercase tracking-widest block mb-1">
-                Drop Item No. 0{selectedIdx + 1}
+                Blueprint Item No. 0{selectedIdx + 1}
               </span>
               <h3 className="text-2xl font-serif font-bold text-reverie-cream mb-2">
                 {activeProduct.name}

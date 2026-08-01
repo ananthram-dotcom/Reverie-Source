@@ -8,30 +8,23 @@ export default {
     extend: {
       colors: {
         reverie: {
-          deep: '#4B2E6B',       // Primary Deep Purple
-          accent: '#7B4FA0',     // Accent Purple
-          light: '#9B68C4',      // Soft Purple Highlight
-          cream: '#F5EDE1',      // Warm Cream / Vintage Felt Neutral
-          ivory: '#FAF6F0',      // Card & Canvas Light Background
-          brass: '#B8860B',      // Aged Brass / Gold Signage Accent
-          gold: '#D4AF37',       // Metallic Gold Highlight
-          walnut: '#3E2723',     // Rich Cue & Frame Walnut Wood
-          darkwalnut: '#2C1A1D', // Dark Background Wood Shadow
-          ink: '#1F1524',        // High contrast text black-purple
+          deep: '#3A1E4F',       // Understated Deep Purple
+          accent: '#5E357C',     // Soft Heritage Purple
+          felt: '#1E4337',       // Billiards Felt Green (Complementary Accent)
+          feltlight: '#2D5A4C',  // Soft Felt Green Highlight
+          cream: '#F4EFE6',      // Warm Off-White / Parchment
+          ivory: '#FAF6F0',      // Soft Ivory
+          brass: '#C5A059',      // Muted Aged Brass
+          gold: '#D4B36A',       // Soft Antique Gold
+          walnut: '#2E1E1B',     // Mahogany Wood
+          darkwalnut: '#18121E', // Sleek Vintage Dark Canvas
+          card: '#221929',       // Minimalist Dark Card Surface
         }
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         sans: ['"Inter"', 'system-ui', 'sans-serif'],
       },
-      backgroundImage: {
-        'brass-gradient': 'linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #8B6508 100%)',
-        'purple-gradient': 'linear-gradient(135deg, #2C1A1D 0%, #4B2E6B 50%, #1F1524 100%)',
-      },
-      boxShadow: {
-        'brass': '0 4px 20px -2px rgba(184, 134, 11, 0.25)',
-        'purple': '0 10px 30px -5px rgba(75, 46, 107, 0.3)',
-      }
     },
   },
   plugins: [],

@@ -1,116 +1,77 @@
-# Reverie — Timeless Billiards Fan Apparel & Heritage Merch (MERN Stack)
+# 🎱 REVERIE — Timeless Billiards Fan Apparel & Heritage Hardware
 
-Reverie is a high-end, vintage-inspired fan merchandise and apparel brand for billiards purists, players, and enthusiasts. Combining 1920s slate-and-felt hall aesthetics with modern millennial energy, Reverie offers heavyweight apparel, solid brass hardware, and an AI-powered concierge chat assistant built on Google Gemini.
+> **Where Precision Geometry Meets Vintage 1920s Hall Nostalgia.**  
+> *Reverie is a luxury, heritage-inspired fan merchandise and apparel brand engineered for cueists, pool purists, players, and collectors.*
 
----
-
-## 🎱 Key Features
-
-- **Vintage Hall Design System**: Deep Purple (`#4B2E6B`), Accent Purple (`#7B4FA0`), Warm Cream (`#F5EDE1`), Aged Brass (`#B8860B`), and Walnut Wood (`#3E2723`), paired with Playfair Display & Inter typography.
-- **Full React 18 + Vite Frontend**: Fast SPA navigation via `react-router-dom`, smooth Framer Motion animations, per-page SEO via `react-helmet-async`, and responsive Tailwind CSS v4 styling.
-- **Express + Node Backend**: RESTful API supporting product catalog, blog journal, newsletter subscriptions, contact inquiries, and AI chatbot proxy.
-- **Google Gemini AI Assistant**: Contextual server-side integration powered by `@google/generative-ai` with a custom Reverie brand system persona.
-- **MongoDB Atlas Integration**: Mongoose models (`Product`, `BlogPost`, `NewsletterSubscriber`, `ContactMessage`) with a seed script (`npm run seed`).
-- **Free-Tier Ready Deployment**: Configured for Vercel (Frontend) and Render (Backend).
+[![Live Website](https://img.shields.io/badge/Website-Reverie%20Billiards-4B2E6B?style=for-the-badge&logo=react)](https://reverie-source.vercel.app)
+[![AI Concierge](https://img.shields.io/badge/AI%20Concierge-Google%20Gemini%203.6-7B4FA0?style=for-the-badge&logo=google)](https://reverie-source.vercel.app)
+[![License](https://img.shields.io/badge/License-MIT-B8860B?style=for-the-badge)](LICENSE)
 
 ---
 
-## 📁 Repository Structure
+## 🏛️ Brand Concept & Philosophy
 
-```
-reverie/
-├── client/                     # React 18 + Vite + Tailwind CSS frontend
-│   ├── public/                 # Favicon & assets
-│   ├── src/
-│   │   ├── components/         # Navbar, Footer, ValueCard, ProductCard, BlogCard, ContactForm, NewsletterForm, ChatbotWidget, CartDrawer
-│   │   ├── context/            # CartContext state
-│   │   ├── pages/              # Home, About, ProductList, ProductDetail, BlogList, BlogDetail, NotFound
-│   │   ├── data/               # Mock fallback dataset
-│   │   ├── index.css           # Tailwind v4 theme & directives
-│   │   └── App.jsx             # Router & Helmet provider
-│   ├── vercel.json             # Vercel SPA routing configuration
-│   └── package.json
-├── server/                     # Node.js + Express backend
-│   ├── src/
-│   │   ├── config/             # DB connection (mongoose)
-│   │   ├── models/             # Product, BlogPost, NewsletterSubscriber, ContactMessage
-│   │   ├── routes/             # API routes (/api/products, /api/blog, /api/newsletter, /api/contact, /api/chat)
-│   │   ├── controllers/        # Express handlers & Gemini AI integration
-│   │   ├── middleware/         # Input validation & rate limiting
-│   │   ├── seed.js             # Initial database seed script
-│   │   └── index.js            # Express server entry point
-│   ├── render.yaml             # Render deployment configuration
-│   ├── .env.example
-│   └── package.json
-├── .gitignore
-└── README.md
-```
+Born from an obsession with the golden age of 1920s billiards parlors, **Reverie** bridges the gap between classic hall heritage and modern millennial streetwear culture. 
+
+In an era of mass-produced fast fashion, Reverie stands for spatial clarity, heavy tactile fabrics, and custom-machined solid brass hardware. Every garment and accessory is designed around the mathematical elegance of cue sports—referencing bank shot angles, rail speed, 480 GSM French Terry cotton weaves, aged brass patina, and tournament-grade felt green aesthetics.
 
 ---
 
-## 🛠️ Local Development Setup
+## 🛍️ The Signature Collection Drops
 
-### 1. Frontend (`client/`)
+### 1. Heavyweight Apparel & Lounge Wear
+* **The Cueist Heavyweight French Terry Hoodie** ($88.00)  
+  *Crafted from ultra-dense 480 GSM French Terry cotton, featuring custom-molded brass eyelets, felt chest applique, and a vintage relaxed 90s drop-shoulder silhouette.*
+* **The Angle of Incidence Graphic Tee** ($48.00)  
+  *240 GSM combed cotton tee featuring vintage blueprint geometry schematics of 3-rail bank shot trajectories.*
+* **The Break Shot Vintage Crewneck** ($78.00)  
+  *Deep purple 420 GSM fleece-lined pullover featuring subtle tone-on-tone silk chest embroidery and ribbed side gussets.*
 
-```bash
-cd client
-npm install
-npm run dev
-```
-The client app will launch locally at `http://localhost:5173`.
-
-### 2. Backend (`server/`)
-
-```bash
-cd server
-npm install
-```
-
-Create a `.env` file inside `server/` (copied from `.env.example`):
-```env
-PORT=5000
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/reverie?retryWrites=true&w=majority
-GEMINI_API_KEY=your_google_ai_studio_api_key
-CLIENT_ORIGIN=http://localhost:5173
-```
-
-Start the Express backend server:
-```bash
-npm run dev
-```
-The backend API will run on `http://localhost:5000`.
-
-### 3. Seed MongoDB Database
-
-To populate sample products and blog entries into your MongoDB Atlas cluster:
-```bash
-cd server
-npm run seed
-```
+### 2. Tailored Accessories & Brass Hardware
+* **1928 Solid Brass 8-Ball Keyring & Pendant** ($36.00)  
+  *Precision-machined C36000 solid brass medallion with laser-etched geometric rail angles and an antique hand-polished patina.*
+* **Felt & Chalk Vintage 6-Panel Strapback** ($42.00)  
+  *Structured 6-panel cap with authentic green felt under-visor, purple silk embroidery, and a brass buckle leather closure.*
+* **Walnut & Full-Grain Leather Cue Companion Bag** ($145.00)  
+  *Hand-stitched cognac full-grain leather bag with plush suede interior lining, built for chalk holders, tip shapers, and personal valuables.*
 
 ---
 
-## 🚀 Free Deployment Guide
+## 🤖 Reverie Cueist AI — Google Gemini Powered Concierge
 
-### Frontend Deployment (Vercel)
-1. Import your GitHub repository into Vercel.
-2. Set **Root Directory** to `client/`.
-3. Set Environment Variable:
-   - `VITE_API_URL` = `https://your-render-backend-url.onrender.com`
-4. Deploy!
+Reverie features an integrated **AI Brand Ambassador** built on **Google Gemini 3.6 Flash**. Accessible directly on the website 24/7, the Reverie Cueist AI assists players and shoppers with:
 
-### Backend Deployment (Render.com)
-1. Create a new **Web Service** on Render connected to your GitHub repo.
-2. Set **Root Directory** to `server/`.
-3. Set Environment Variables:
-   - `MONGODB_URI` = your MongoDB Atlas connection string
-   - `GEMINI_API_KEY` = your Google AI Studio API key
-   - `CLIENT_ORIGIN` = `https://your-vercel-app.vercel.app`
-4. Deploy!
+* **Tailored Sizing Advice**: Recommending precise fits based on drape preference (tailored vs. 90s oversized).
+* **Curated Product Selection**: Guiding customers to the perfect gifts for billiards enthusiasts and players.
+* **Brand & Sport Lore**: Answering questions regarding historical 1920s parlor culture, famous record runs, and bank shot geometry.
 
 ---
 
-## 🏷️ Release
+## 📜 The Slate & Felt Journal
 
-- **Version**: `v1.0.0`
-- **License**: MIT
+The website hosts an exclusive digital publication exploring the history and craft of cue sports:
+
+1. **The Geometry of the 3-Rail Bank**: A deep dive into bank shot math, cushion elasticity, and friction coefficients.
+2. **Willie Mosconi’s 1954 Run**: Chronicling the legendary 526-consecutive-ball record set in Springfield, Ohio.
+3. **Bensinger’s 1928 Chicago Parlor**: Exploring the golden age of mahogany tables, stained glass lighting, and brass chalk holders.
+
+---
+
+## 🌿 Sustainable Craftsmanship & Quality Standards
+
+* **Heavyweight Construction**: All garments use 240 to 480 GSM natural cotton for durability and structured drape.
+* **Solid C36000 Brass**: Hardware is custom-cast in solid brass designed to age gracefully with a natural patina.
+* **Real Wool Felt**: Caps and appliques utilize authentic billiard table wool felt.
+* **Free Worldwide Shipping**: On all orders over $75.00.
+
+---
+
+## 🔗 Connect & Explore
+
+* **Live Store & Experience**: [reverie-source.vercel.app](https://reverie-source.vercel.app)
+* **Official Repository**: [github.com/ananthram-dotcom/Reverie-Source](https://github.com/ananthram-dotcom/Reverie-Source)
+* **Brand Persona**: Reverie Cueist Concierge AI powered by Google Gemini
+
+---
+
+*© 2026 Reverie Billiards Co. All Rights Reserved. Engineered for Purists & Cueists.*

@@ -5,7 +5,8 @@
 
 [![Live Website](https://img.shields.io/badge/Website-Reverie%20Billiards-4B2E6B?style=for-the-badge&logo=react)](https://reverie-source.vercel.app)
 [![AI Concierge](https://img.shields.io/badge/AI%20Concierge-Google%20Gemini%203.6-7B4FA0?style=for-the-badge&logo=google)](https://reverie-source.vercel.app)
-[![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=for-the-badge)](LICENSE.md)
+
 
 
 ---

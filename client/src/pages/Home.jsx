@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import ValueCard from '../components/ValueCard';
 import ProductCard from '../components/ProductCard';
 import BlogCard from '../components/BlogCard';
 import ContactForm from '../components/ContactForm';
 import NewsletterForm from '../components/NewsletterForm';
-import { MOCK_PRODUCTS, MOCK_BLOGS } from '../data/mockData';
+import MarqueeTicker from '../components/MarqueeTicker';
+import BlueprintBreakdown from '../components/BlueprintBreakdown';
+import LookbookGallery from '../components/LookbookGallery';
+import ManifestoBlock from '../components/ManifestoBlock';
 import ReverieLogo from '../components/ReverieLogo';
-import { Target, Award, Sparkles, ArrowRight } from 'lucide-react';
+import { MOCK_PRODUCTS, MOCK_BLOGS } from '../data/mockData';
+import { ArrowRight, Disc } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Home = () => {
@@ -25,7 +28,7 @@ const Home = () => {
         />
       </Helmet>
 
-      <div className="space-y-24 pb-24">
+      <div className="space-y-20 pb-24">
         
         {/* HERO SECTION WITH VINTAGE PORTRAIT BACKGROUND */}
         <section className="relative min-h-[88vh] flex items-center justify-center pt-32 pb-24 overflow-hidden border-b border-reverie-brass/20">
@@ -37,7 +40,7 @@ const Home = () => {
               alt="Vintage Billiards Hall Ambient"
               className="w-full h-full object-cover object-center scale-105 filter blur-[4px] brightness-[0.38] contrast-[1.15]"
             />
-            {/* Soft Dark Vignette & Gradient Overlays for High Contrast Readability */}
+            {/* Soft Dark Vignette & Gradient Overlays */}
             <div className="absolute inset-0 bg-gradient-to-t from-reverie-darkwalnut via-reverie-darkwalnut/75 to-reverie-darkwalnut/90" />
             <div className="absolute inset-0 bg-gradient-to-r from-reverie-darkwalnut/90 via-transparent to-reverie-darkwalnut/90" />
           </div>
@@ -100,46 +103,15 @@ const Home = () => {
           </div>
         </section>
 
-        {/* BRAND VALUES SECTION */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-            <span className="text-[11px] font-sans font-bold text-reverie-brass tracking-widest uppercase">
-              Craft Philosophy
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-serif font-bold text-reverie-cream">
-              Precision in Every Thread & Seam
-            </h2>
-            <p className="text-xs sm:text-sm text-reverie-cream/75">
-              Billiards is a game of millimeters. We apply that exact discipline to fabric weight, brass hardware, and embroidered graphics.
-            </p>
-          </div>
+        {/* MARQUEE ANNOUNCEMENT TICKER */}
+        <MarqueeTicker />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ValueCard
-              icon={Target}
-              subtitle="Mathematical Rigor"
-              title="Exact Geometry"
-              description="From angle-of-incidence graphic layouts to seam stress testing, every design honors the mathematical purity of bank shots."
-              index={0}
-            />
-            <ValueCard
-              icon={Award}
-              subtitle="1920s Parlor Aesthetics"
-              title="Heritage Materials"
-              description="Heavyweight 480gsm French Terry cotton, aged brass eyelets, real felt undertones, and vegetable-tanned leather accents."
-              index={1}
-            />
-            <ValueCard
-              icon={Sparkles}
-              subtitle="Millennial Modern Style"
-              title="Clean & Understated"
-              description="Say goodbye to cheap polyester novelty tees. Reverie delivers elevated streetwear nostalgia designed for daily wear."
-              index={2}
-            />
-          </div>
+        {/* INTERACTIVE MERCH BLUEPRINT INSPECTION */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BlueprintBreakdown />
         </section>
 
-        {/* FEATURED PRODUCTS */}
+        {/* FEATURED PRODUCTS DROPS */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-end justify-between mb-8 border-b border-reverie-brass/15 pb-4 gap-4">
             <div>
@@ -147,7 +119,7 @@ const Home = () => {
                 Curated Collection
               </span>
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-reverie-cream">
-                Featured Apparel & Hardware
+                Quarterly Drop Ledger
               </h2>
             </div>
             <Link
@@ -166,42 +138,14 @@ const Home = () => {
           </div>
         </section>
 
-        {/* BRAND STORY TEASER CARD WITH PORTRAIT IMAGE */}
+        {/* ARCHIVAL LOOKBOOK SPREAD */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-reverie-card rounded-2xl border border-reverie-brass/25 p-8 md:p-12 shadow-sm relative overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-7 space-y-5">
-                <span className="text-[11px] font-sans font-bold text-reverie-brass tracking-widest uppercase">
-                  Inside Reverie Hall
-                </span>
-                <h2 className="text-2xl sm:text-4xl font-serif font-bold text-reverie-cream leading-tight">
-                  Born in the Shadows of Slate & Mahogany
-                </h2>
-                <p className="text-xs sm:text-sm text-reverie-cream/80 leading-relaxed font-sans">
-                  We started Reverie because we got tired of generic corporate merch that treated cue sports like a tavern joke. Billiards is an art form—a quiet battlefield of calculation, patience, and style.
-                </p>
-                <div className="pt-2">
-                  <Link
-                    to="/about"
-                    className="inline-flex items-center space-x-2 px-5 py-2.5 bg-reverie-brass text-reverie-darkwalnut font-bold text-xs rounded-lg hover:bg-reverie-gold transition-colors"
-                  >
-                    <span>Read The Full Story</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
+          <LookbookGallery />
+        </section>
 
-              <div className="lg:col-span-5 flex justify-center">
-                <div className="w-60 h-60 sm:w-72 sm:h-72 rounded-xl overflow-hidden border border-reverie-brass/30 shadow-md">
-                  <img
-                    src="/images/billiards_table_slate_mahogany.png"
-                    alt="Vintage Billiards Table"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* MANIFESTO & ARCHIVAL LEDGER BLOCK */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ManifestoBlock />
         </section>
 
         {/* JOURNAL / BLOG PREVIEW */}
@@ -209,7 +153,7 @@ const Home = () => {
           <div className="flex items-end justify-between mb-8 border-b border-reverie-brass/15 pb-4">
             <div>
               <span className="text-[11px] font-sans font-bold text-reverie-brass tracking-widest uppercase block mb-1">
-                The Cueist Journal
+                The Cueist Gazette
               </span>
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-reverie-cream">
                 Stories from the Felt
@@ -219,7 +163,7 @@ const Home = () => {
               to="/blog"
               className="text-xs font-bold text-reverie-brass hover:text-reverie-gold flex items-center space-x-1.5 transition-colors uppercase tracking-wider"
             >
-              <span>Explore Journal</span>
+              <span>Explore Gazette</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

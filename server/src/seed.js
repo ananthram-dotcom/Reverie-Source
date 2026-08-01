@@ -1,3 +1,8 @@
+import dns from 'dns';
+try {
+  dns.setServers(['8.8.8.8', '8.8.4.4']);
+} catch (e) {}
+
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import { Product } from './models/Product.js';
@@ -261,9 +266,6 @@ const sampleBlogs = [
     content: `
       <p class="lead">Billiards is not a game of chance. It is applied physics, spatial geometry, and unwavering emotional control disguised as recreation.</p>
       <p>When legendary cueist <strong>Willie Mosconi</strong> set his immortal world record run of 526 consecutive balls at the East Green Street Billiard Academy in Springfield, Ohio on March 19, 1954, he did not rely on intuition alone. Observers recorded that Mosconi moved around the 4x8 Brunswick table with the methodical calculation of a structural engineer drafting blueprint schematics.</p>
-      <h3>The Mathematics of Cushion Reflection</h3>
-      <p>At the center of cue sports mastery lies the fundamental law of reflection: the angle of incidence equals the angle of reflection. However, on a real slate table lined with <strong>Iwan Simonis 860 worsted wool cloth</strong> and vulcanized rubber cushions, theoretical physics meets real-world friction.</p>
-      <blockquote>"A novice player guesses where the cue ball will bounce. A master cueist calculates the precise point on the rail slate down to the millimeter." — Willie Mosconi, 1954</blockquote>
     `
   },
   {
@@ -277,21 +279,6 @@ const sampleBlogs = [
     image: '/images/billiards_table_slate_mahogany.png',
     content: `
       <p class="lead">In November 1928, if you walked down Randolph Street in downtown Chicago and pushed open the heavy brass-trimmed oak doors of <strong>Bensinger’s Billiard Parlor</strong>, you entered a cathedral of concentration.</p>
-      <p>During the 1920s, billiards was America's premier indoor sport. Parlors like Bensinger's in Chicago and <em>Doyle's</em> in New York hosted thousands of spectators who paid silver dollars to watch 14-time World Champion <strong>Ralph Greenleaf</strong> display unbelievable cue ball control on Italian slate tables.</p>
-    `
-  },
-  {
-    slug: 'how-to-style-vintage-billiards-merch',
-    title: 'Millennial Vintage & The Art of Heritage Tailoring: A Modern Style Guide',
-    excerpt: 'From London’s Savile Row tailoring cues to NYC streetwear, exploring how to style 480gsm French Terry hoodies, solid C36000 brass hardware, and real felt trims.',
-    category: 'Style Guide',
-    author: 'Marcus Reed',
-    readTime: '6 min read',
-    date: 'July 15, 2026',
-    image: '/images/angle_of_incidence_tee.png',
-    content: `
-      <p class="lead">Styling vintage fan apparel in the modern era requires a delicate balance between classic heritage tailoring and relaxed contemporary streetwear.</p>
-      <p>Too often, brand merchandise feels disposable or overly branded with loud graphics. At <strong>Reverie</strong>, we design small-batch apparel around the principles of <em>quiet luxury</em> and high-density material weight.</p>
     `
   }
 ];

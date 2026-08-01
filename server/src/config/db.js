@@ -1,16 +1,16 @@
+import dns from 'dns';
+try {
+  dns.setServers(['8.8.8.8', '8.8.4.4']);
+} catch (e) {}
+
 import mongoose from 'mongoose';
 
 export const connectDB = async () => {
   try {
-    const connStr = process.env.MONGODB_URI;
-    if (!connStr) {
-      console.warn('⚠️ MONGODB_URI not found in process.env. Database features will operate with fallback mock data.');
-      return;
-    }
-    const conn = await mongoose.connect(connStr);
+    const conn = await mongoose.connect(process.env.MONGODB_URI);
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
-    console.error(`❌ MongoDB Connection Error: ${error.message}`);
-    // Don't crash server in local dev if DB isn't running yet
+    console.error(`❌ Error connecting to MongoDB: ${error.message}`);
+    process.exit(1);
   }
 };

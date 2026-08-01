@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageSquare, X, Send, Disc, Sparkles } from 'lucide-react';
+import { MessageSquare, X, Send, Sparkles } from 'lucide-react';
+import ReverieLogo from './ReverieLogo';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ChatbotWidget = () => {
@@ -124,9 +125,7 @@ const ChatbotWidget = () => {
             {/* Window Header */}
             <div className="p-3.5 bg-reverie-darkwalnut border-b border-reverie-brass/25 flex items-center justify-between">
               <div className="flex items-center space-x-2.5">
-                <div className="w-7 h-7 rounded-full bg-reverie-felt/40 border border-reverie-feltlight flex items-center justify-center text-emerald-300">
-                  <Disc className="w-3.5 h-3.5" />
-                </div>
+                <ReverieLogo className="w-5 h-5" />
                 <div>
                   <h3 className="font-serif font-bold text-xs text-reverie-cream">
                     Reverie Cueist AI
@@ -224,10 +223,10 @@ const ChatbotWidget = () => {
       {/* Floating Launcher Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-3.5 bg-reverie-card border border-reverie-brass/50 text-reverie-brass hover:border-reverie-brass hover:bg-reverie-darkwalnut rounded-full shadow-md transition-all duration-300 flex items-center justify-center cursor-pointer group"
+        className="p-3 bg-reverie-card border border-reverie-brass/50 text-reverie-brass hover:border-reverie-brass hover:bg-reverie-darkwalnut rounded-full shadow-md transition-all duration-300 flex items-center justify-center cursor-pointer group"
         aria-label="Open AI Assistant"
       >
-        <MessageSquare className="w-5 h-5 group-hover:scale-105 transition-transform" />
+        <ReverieLogo className="w-5 h-5" />
       </button>
     </div>
   );

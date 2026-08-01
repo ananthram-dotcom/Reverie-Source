@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
-import { ShoppingBag, Menu, X, Disc } from 'lucide-react';
+import { ShoppingBag, Menu, X } from 'lucide-react';
+import ReverieLogo from './ReverieLogo';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
@@ -39,26 +40,16 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#18121E]/95 backdrop-blur-md py-3.5 border-b border-[#C5A059]/25 shadow-md'
-          : 'bg-[#18121E]/90 backdrop-blur-md py-4 border-b border-[#C5A059]/15'
+          ? 'bg-[#18121E]/95 backdrop-blur-md py-3 border-b border-[#C5A059]/25 shadow-md'
+          : 'bg-[#18121E]/90 backdrop-blur-md py-3.5 border-b border-[#C5A059]/15'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-9 h-9 rounded-full bg-reverie-deep border border-reverie-brass/40 flex items-center justify-center group-hover:border-reverie-brass transition-colors">
-              <Disc className="w-4 h-4 text-reverie-brass" />
-            </div>
-            <div>
-              <span className="font-serif text-xl font-bold tracking-widest text-reverie-cream group-hover:text-reverie-brass transition-colors block leading-none">
-                REVERIE
-              </span>
-              <span className="text-[9px] tracking-[0.2em] text-reverie-brass uppercase font-sans font-semibold block mt-1">
-                Precision Cueists
-              </span>
-            </div>
+          {/* Brand Logo with Custom Emblem */}
+          <Link to="/">
+            <ReverieLogo className="w-9 h-9" showText={true} />
           </Link>
 
           {/* Desktop Nav Links */}

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ValueCard from '../components/ValueCard';
-import { Target, Award, Sparkles, Disc, CheckCircle2 } from 'lucide-react';
+import ReverieLogo from '../components/ReverieLogo';
+import { Target, Award, Sparkles, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -35,7 +36,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-reverie-darkwalnut/80 border border-reverie-brass/40 text-emerald-300 text-[11px] font-sans font-semibold tracking-widest uppercase backdrop-blur-md"
             >
-              <Disc className="w-3.5 h-3.5 text-reverie-brass" />
+              <ReverieLogo className="w-3.5 h-3.5" />
               <span>The Geometry of the Game</span>
             </motion.div>
 

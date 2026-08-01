@@ -2,7 +2,8 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { MOCK_BLOGS } from '../data/mockData';
-import { Calendar, Clock, ArrowLeft, Share2, Disc } from 'lucide-react';
+import ReverieLogo from '../components/ReverieLogo';
+import { Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react';
 
 const BlogDetail = () => {
   const { slug } = useParams();
@@ -74,8 +75,8 @@ const BlogDetail = () => {
         {/* Article Footer */}
         <div className="pt-12 border-t border-reverie-brass/30 bg-gradient-to-r from-reverie-deep to-reverie-darkwalnut p-8 rounded-2xl border border-reverie-brass/40 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-purple">
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 rounded-full bg-reverie-deep border border-reverie-brass flex items-center justify-center text-reverie-brass shadow-brass">
-              <Disc className="w-6 h-6" />
+            <div className="w-12 h-12 rounded-full bg-reverie-deep border border-reverie-brass flex items-center justify-center shadow-brass">
+              <ReverieLogo className="w-6 h-6" />
             </div>
             <div>
               <h4 className="font-serif font-bold text-reverie-cream text-base">Reverie Editorial Board</h4>

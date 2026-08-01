@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NewsletterForm from './NewsletterForm';
-import { Disc, Target, Award, Sparkles } from 'lucide-react';
+import ReverieLogo from './ReverieLogo';
+import { Target, Award, Sparkles } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -46,15 +47,10 @@ const Footer = () => {
           
           {/* Brand Column */}
           <div className="lg:col-span-5 space-y-3">
-            <div className="flex items-center space-x-2.5">
-              <div className="w-8 h-8 rounded-full bg-reverie-deep border border-reverie-brass/40 flex items-center justify-center">
-                <Disc className="w-4 h-4 text-reverie-brass" />
-              </div>
-              <span className="font-serif text-xl font-bold tracking-widest text-reverie-cream">
-                REVERIE
-              </span>
-            </div>
-            <p className="text-xs text-reverie-cream/75 max-w-sm leading-relaxed">
+            <Link to="/">
+              <ReverieLogo className="w-8 h-8" showText={true} />
+            </Link>
+            <p className="text-xs text-reverie-cream/75 max-w-sm leading-relaxed pt-1">
               Timeless billiards apparel for players and purists who respect the table. Blending vintage hall nostalgia with understated modern luxury.
             </p>
 

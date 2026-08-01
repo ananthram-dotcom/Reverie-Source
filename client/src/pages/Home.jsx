@@ -7,7 +7,8 @@ import BlogCard from '../components/BlogCard';
 import ContactForm from '../components/ContactForm';
 import NewsletterForm from '../components/NewsletterForm';
 import { MOCK_PRODUCTS, MOCK_BLOGS } from '../data/mockData';
-import { Target, Award, Sparkles, ArrowRight, Disc } from 'lucide-react';
+import ReverieLogo from '../components/ReverieLogo';
+import { Target, Award, Sparkles, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Home = () => {
@@ -51,7 +52,7 @@ const Home = () => {
               transition={{ duration: 0.5 }}
               className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-reverie-darkwalnut/80 border border-reverie-brass/40 text-emerald-300 text-xs font-sans font-semibold tracking-widest uppercase backdrop-blur-md shadow-sm"
             >
-              <Disc className="w-3.5 h-3.5 text-reverie-brass" />
+              <ReverieLogo className="w-3.5 h-3.5" />
               <span>Est. 1928 • Heritage Cueist Apparel</span>
             </motion.div>
 
@@ -239,7 +240,7 @@ const Home = () => {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-reverie-card border border-reverie-brass/25 p-8 sm:p-10 rounded-2xl text-center max-w-3xl mx-auto space-y-5 shadow-sm">
             <div className="w-10 h-10 rounded-full bg-reverie-felt/40 border border-reverie-feltlight flex items-center justify-center mx-auto text-emerald-300">
-              <Disc className="w-5 h-5" />
+              <ReverieLogo className="w-5 h-5" />
             </div>
             <div className="space-y-1.5">
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-reverie-cream">

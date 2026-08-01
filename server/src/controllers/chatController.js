@@ -42,6 +42,21 @@ export const handleChat = async (req, res) => {
     const genAI = new GoogleGenerativeAI(apiKey);
     let replyText = '';
 
+    // Sanitize history so that it begins with a 'user' message as required by Gemini SDK
+    let validHistory = [];
+    if (Array.isArray(history)) {
+      validHistory = history
+        .filter((h) => h && h.role && Array.isArray(h.parts) && h.parts[0]?.text)
+        .map((h) => ({
+          role: h.role === 'bot' || h.role === 'model' ? 'model' : 'user',
+          parts: [{ text: String(h.parts[0].text) }]
+        }));
+
+      while (validHistory.length > 0 && validHistory[0].role === 'model') {
+        validHistory.shift();
+      }
+    }
+
     // Try live Google Gemini API with supported models
     const modelsToTry = ['gemini-3.6-flash', 'gemini-3.5-flash', 'gemini-3.5-flash-lite', 'gemini-omni-flash-preview', 'gemini-2.5-flash'];
     let success = false;
@@ -53,7 +68,7 @@ export const handleChat = async (req, res) => {
           systemInstruction: SYSTEM_INSTRUCTION
         });
         const chatSession = model.startChat({
-          history: Array.isArray(history) ? history : []
+          history: validHistory
         });
         const result = await chatSession.sendMessage(message);
         replyText = result.response.text();

@@ -251,31 +251,47 @@ const sampleProducts = [
 const sampleBlogs = [
   {
     slug: 'geometry-of-the-bank-shot',
-    title: 'The Unforgiving Geometry of the Three-Rail Bank Shot',
-    excerpt: 'Why master cueists treat pool tables like mechanical drafting boards, and how angle precision shapes everything we design at Reverie.',
+    title: 'The Unforgiving Geometry of the Three-Rail Bank Shot: Applied Physics from Mosconi to Modern Slate',
+    excerpt: 'An in-depth analysis of kinetic vector transfer, rail elasticity, and why Willie Mosconi treated every 14.1 Continuous rack like an architectural drafting board.',
     category: 'Billiards Science',
     author: 'Julian Vance',
-    readTime: '5 min read',
+    readTime: '8 min read',
     date: 'August 1, 2026',
     image: '/images/billiards_journal_geometry.png',
     content: `
-      <p class="lead">Billiards is not a game of luck. It is applied physics, spatial geometry, and unwavering nerve disguised as recreation.</p>
-      <h3>The Mirror Formula</h3>
-      <p>When you stand at the foot of an antique Brunswick table, the cushion rails act as optical mirrors. The angle of incidence equals the angle of reflection—provided you account for rail speed, cloth friction, and cue ball side-spin (english).</p>
-      <blockquote>"A player who guesses angles will win a frame. A player who understands the geometry will win the tournament."</blockquote>
+      <p class="lead">Billiards is not a game of chance. It is applied physics, spatial geometry, and unwavering emotional control disguised as recreation.</p>
+      <p>When legendary cueist <strong>Willie Mosconi</strong> set his immortal world record run of 526 consecutive balls at the East Green Street Billiard Academy in Springfield, Ohio on March 19, 1954, he did not rely on intuition alone. Observers recorded that Mosconi moved around the 4x8 Brunswick table with the methodical calculation of a structural engineer drafting blueprint schematics.</p>
+      <h3>The Mathematics of Cushion Reflection</h3>
+      <p>At the center of cue sports mastery lies the fundamental law of reflection: the angle of incidence equals the angle of reflection. However, on a real slate table lined with <strong>Iwan Simonis 860 worsted wool cloth</strong> and vulcanized rubber cushions, theoretical physics meets real-world friction.</p>
+      <blockquote>"A novice player guesses where the cue ball will bounce. A master cueist calculates the precise point on the rail slate down to the millimeter." — Willie Mosconi, 1954</blockquote>
     `
   },
   {
     slug: 'golden-era-of-american-billiards-halls',
-    title: 'Brass, Smoke & Mahogany: The Golden Era of 1920s Billiards Halls',
-    excerpt: 'Stepping through the heavy oak doors of Chicago and New York pool rooms when cue sports were America’s premier competitive obsession.',
+    title: 'Brass, Smoke & Mahogany: Inside Bensinger’s and the 1928 World Championship Era',
+    excerpt: 'Stepping through the heavy oak doors of Chicago’s legendary Bensinger’s Billiard Parlor during the golden decade when Ralph Greenleaf ruled America’s premier spectator sport.',
     category: 'Heritage Culture',
     author: 'Eleanor Sterling',
-    readTime: '7 min read',
+    readTime: '9 min read',
     date: 'July 24, 2026',
     image: '/images/billiards_table_slate_mahogany.png',
     content: `
-      <p>In 1928, entering a high-stakes billiards parlor was like entering a cathedral of precision. The low hum of shaded green glass pendants over slate tables created an atmosphere where quiet concentration reigned supreme.</p>
+      <p class="lead">In November 1928, if you walked down Randolph Street in downtown Chicago and pushed open the heavy brass-trimmed oak doors of <strong>Bensinger’s Billiard Parlor</strong>, you entered a cathedral of concentration.</p>
+      <p>During the 1920s, billiards was America's premier indoor sport. Parlors like Bensinger's in Chicago and <em>Doyle's</em> in New York hosted thousands of spectators who paid silver dollars to watch 14-time World Champion <strong>Ralph Greenleaf</strong> display unbelievable cue ball control on Italian slate tables.</p>
+    `
+  },
+  {
+    slug: 'how-to-style-vintage-billiards-merch',
+    title: 'Millennial Vintage & The Art of Heritage Tailoring: A Modern Style Guide',
+    excerpt: 'From London’s Savile Row tailoring cues to NYC streetwear, exploring how to style 480gsm French Terry hoodies, solid C36000 brass hardware, and real felt trims.',
+    category: 'Style Guide',
+    author: 'Marcus Reed',
+    readTime: '6 min read',
+    date: 'July 15, 2026',
+    image: '/images/angle_of_incidence_tee.png',
+    content: `
+      <p class="lead">Styling vintage fan apparel in the modern era requires a delicate balance between classic heritage tailoring and relaxed contemporary streetwear.</p>
+      <p>Too often, brand merchandise feels disposable or overly branded with loud graphics. At <strong>Reverie</strong>, we design small-batch apparel around the principles of <em>quiet luxury</em> and high-density material weight.</p>
     `
   }
 ];
@@ -296,7 +312,7 @@ async function seedData() {
     await Product.insertMany(sampleProducts);
     await BlogPost.insertMany(sampleBlogs);
 
-    console.log('🎉 Seed Completed Successfully! 12 Unique Products & Blogs Populated.');
+    console.log('🎉 Seed Completed Successfully! 12 Unique Products & Long-Form SEO Journals Populated.');
     process.exit(0);
   } catch (error) {
     console.error('❌ Seed Failed:', error);

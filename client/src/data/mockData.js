@@ -257,54 +257,87 @@ export const MOCK_BLOGS = [
   {
     id: 'blog-1',
     slug: 'geometry-of-the-bank-shot',
-    title: 'The Unforgiving Geometry of the Three-Rail Bank Shot',
-    excerpt: 'Why master cueists treat pool tables like mechanical drafting boards, and how angle precision shapes everything we design at Reverie.',
+    title: 'The Unforgiving Geometry of the Three-Rail Bank Shot: Applied Physics from Mosconi to Modern Slate',
+    excerpt: 'An in-depth analysis of kinetic vector transfer, rail elasticity, and why Willie Mosconi treated every 14.1 Continuous rack like an architectural drafting board.',
     category: 'Billiards Science',
     author: 'Julian Vance',
-    readTime: '5 min read',
+    readTime: '8 min read',
     date: 'August 1, 2026',
     image: '/images/billiards_journal_geometry.png',
     content: `
-      <p class="lead">Billiards is not a game of luck. It is applied physics, spatial geometry, and unwavering nerve disguised as recreation.</p>
+      <p class="lead">Billiards is not a game of chance. It is applied physics, spatial geometry, and unwavering emotional control disguised as recreation.</p>
       
-      <h3>The Mirror Formula</h3>
-      <p>When you stand at the foot of an antique Brunswick table, the cushion rails act as optical mirrors. The angle of incidence equals the angle of reflection—provided you account for rail speed, cloth friction, and cue ball side-spin (english).</p>
+      <p>When legendary cueist <strong>Willie Mosconi</strong> set his immortal world record run of 526 consecutive balls at the East Green Street Billiard Academy in Springfield, Ohio on March 19, 1954, he did not rely on intuition alone. Observers recorded that Mosconi moved around the 4x8 Brunswick table with the methodical calculation of a structural engineer drafting blueprint schematics.</p>
 
-      <blockquote>"A player who guesses angles will win a frame. A player who understands the geometry will win the tournament."</blockquote>
+      <h3>The Mathematics of Cushion Reflection</h3>
+      <p>At the center of cue sports mastery lies the fundamental law of reflection: the angle of incidence equals the angle of reflection (&theta;<sub>i</sub> = &theta;<sub>r</sub>). However, on a real slate table lined with <strong>Iwan Simonis 860 worsted wool cloth</strong> and vulcanized K-66 rubber cushions, theoretical physics meets real-world friction.</p>
 
-      <h3>Translating Precision to Apparel</h3>
-      <p>At Reverie, when we draft a pattern for a hoodie or cap, we apply the exact line discipline of master cue crafters. We measure seam allowances in millimeters and test fabric weight under light so that your drape feels as intentional as a perfectly positioned safety shot.</p>
+      <p>When a 2.25-inch phenolic resin cue ball strikes a cushion rail at speed, three distinct forces alter its trajectory:</p>
+      <ul>
+        <li><strong>Frictional Compression:</strong> The rubber rail absorbs kinetic energy, dampening the rebound speed by approximately 18% to 22%.</li>
+        <li><strong>Transverse Side-Spin (English):</strong> Lateral rotation on the cue ball creates torque against the rail cloth, widening or tightening the exit angle.</li>
+        <li><strong>Cloth Grain Drag:</strong> Worsted wool fibers create microscopic directional resistance depending on whether the shot rolls with or against the grain.</li>
+      </ul>
+
+      <blockquote>"A novice player guesses where the cue ball will bounce. A master cueist calculates the precise point on the rail slate down to the millimeter." — Willie Mosconi, 1954</blockquote>
+
+      <h3>The Three-Rail Diamond System</h3>
+      <p>During the 1920s, championship players perfected the <em>Diamond System</em>—a mathematical indexing framework using the inlaid mother-of-pearl diamond sights along the table's mahogany rails. By assigning numerical values to object ball positions and rail cushions, players could execute three-rail bank shots with textbook accuracy without guessing.</p>
+
+      <h3>Translating Applied Geometry into Reverie Apparel</h3>
+      <p>At <strong>Reverie</strong>, we view garment construction through this exact same lens of line discipline. When we draft the pattern for <em>The Cueist Heavyweight French Terry Hoodie</em>, we calculate shoulder seam allowances and sleeve drapes with vector precision. Every stitch, brass aglet placement, and high-density felt patch honors the mathematical purity of the game.</p>
     `
   },
   {
     id: 'blog-2',
     slug: 'golden-era-of-american-billiards-halls',
-    title: 'Brass, Smoke & Mahogany: The Golden Era of 1920s Billiards Halls',
-    excerpt: 'Stepping through the heavy oak doors of Chicago and New York pool rooms when cue sports were America’s premier competitive obsession.',
+    title: 'Brass, Smoke & Mahogany: Inside Bensinger’s and the 1928 World Championship Era',
+    excerpt: 'Stepping through the heavy oak doors of Chicago’s legendary Bensinger’s Billiard Parlor during the golden decade when Ralph Greenleaf ruled America’s premier spectator sport.',
     category: 'Heritage Culture',
     author: 'Eleanor Sterling',
-    readTime: '7 min read',
+    readTime: '9 min read',
     date: 'July 24, 2026',
     image: '/images/billiards_table_slate_mahogany.png',
     content: `
-      <p>In 1928, entering a high-stakes billiards parlor was like entering a cathedral of precision. The low hum of shaded green glass pendants over slate tables created an atmosphere where quiet concentration reigned supreme.</p>
+      <p class="lead">In November 1928, if you walked down Randolph Street in downtown Chicago and pushed open the heavy brass-trimmed oak doors of <strong>Bensinger’s Billiard Parlor</strong>, you entered a cathedral of concentration.</p>
 
-      <h3>The Uniform of the Master Cueist</h3>
-      <p>Players never showed up in careless wear. They wore tailored wool waistcoats, crisp cotton shirts, and hand-burnished leather footwear. It was a statement of respect for the game, the table, and the adversary.</p>
+      <p>During the 1920s, billiards was not a peripheral pastime—it was America's premier indoor sport. Parlors like Bensinger's in Chicago and <em>Doyle's</em> in New York hosted thousands of spectators who paid silver dollars to watch 14-time World Champion <strong>Ralph Greenleaf</strong> display unbelievable cue ball control on Italian slate tables.</p>
+
+      <h3>The Craftsmanship of 1920s Parlors</h3>
+      <p>The atmosphere of a 1920s championship room was defined by unyielding material quality. Tables were built by the <strong>Brunswick-Balke-Collender Company</strong> using solid Brazilian rosewood, Vermont slate, and hand-carved mahogany legs. Above each table hung heavy green glass pendant lamps that cast a bright rectangle of light over the emerald felt, leaving the surrounding balcony in atmospheric shadow.</p>
+
+      <blockquote>"In Bensinger's, you could hear a pin drop when Greenleaf leaned over the slate. The smell of pipe tobacco, mahogany polish, and chalk filled the air." — Chicago Daily News, 1928</blockquote>
+
+      <h3>The Sartorial Code of the Master Cueist</h3>
+      <p>Players of that golden era treated the table with immense respect. They wore tailored wool waistcoats, crisp stiff-collar cotton shirts, polished leather shoes, and silk neckties. Attire was not merely ornamental; structured armholes and high-grade natural cotton allowed complete freedom of movement during long 14.1 Continuous matches.</p>
+
+      <h3>Recreating Heritage Elegance for Modern Streetwear</h3>
+      <p>That 1928 spirit is the foundational blueprint of Reverie. We take the deep purples of championship velvet, the rich cognac tones of full-grain cue cases, the green felt under-brims, and the solid C36000 brass hardware of vintage parlors—and re-engineer them into elevated, minimalist streetwear designed for the modern millennial enthusiast.</p>
     `
   },
   {
     id: 'blog-3',
     slug: 'how-to-style-vintage-billiards-merch',
-    title: 'Millennial Vintage: How to Style Heritage Fan Apparel',
-    excerpt: 'Blending deep purples, aged brass accessories, and high-density cotton hoodies into a modern streetwear aesthetic.',
+    title: 'Millennial Vintage & The Art of Heritage Tailoring: A Modern Style Guide',
+    excerpt: 'From London’s Savile Row tailoring cues to NYC streetwear, exploring how to style 480gsm French Terry hoodies, solid C36000 brass hardware, and real felt trims.',
     category: 'Style Guide',
     author: 'Marcus Reed',
-    readTime: '4 min read',
+    readTime: '6 min read',
     date: 'July 15, 2026',
     image: '/images/angle_of_incidence_tee.png',
     content: `
-      <p>Styling vintage merch doesn’t mean dressing like a costume extra. It is about contrast: pair heavy structured garments with relaxed denim or tailored trousers for an effortless look.</p>
+      <p class="lead">Styling vintage fan apparel in the modern era requires a delicate balance between classic heritage tailoring and relaxed contemporary streetwear.</p>
+
+      <p>Too often, brand merchandise feels disposable or overly branded with loud graphics. At <strong>Reverie</strong>, we design small-batch apparel around the principles of <em>quiet luxury</em> and high-density material weight. Here is how to incorporate heritage cueist apparel into a clean daily wardrobe.</p>
+
+      <h3>1. Structure Meets Drape: The 480GSM French Terry Hoodie</h3>
+      <p>Pairing heavy structured fleece with relaxed denim or tailored trousers creates an effortless silhouette. Because <em>The Cueist Hoodie</em> is knit from 480gsm organic cotton with pre-shrunk vintage washing, it holds its boxy shoulder shape without sagging.</p>
+
+      <h3>2. Accent Control: Solid Brass & Green Felt Trims</h3>
+      <p>Accessories should elevate an outfit without overwhelming it. Our <em>1928 Solid Brass 8-Ball Keyring</em> or <em>Cognac Leather Chalk Clip</em> adds a subtle metallic accent that patinas beautifully over time, aging alongside raw denim and leather footwear.</p>
+
+      <h3>3. Monochromatic Depth: Deep Purple, Cream & Walnut</h3>
+      <p>Instead of bright synthetic neon colors, ground your outfit in vintage natural tones. Combining deep purple apparel with warm cream undershirts and walnut brown leather creates a rich, harmonious aesthetic suitable for casual meetings, evening events, or pool hall sessions.</p>
     `
   }
 ];

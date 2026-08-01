@@ -1,20 +1,23 @@
 # Proprietary License — All Rights Reserved
 
-**Copyright (c) 2026 Reverie Billiards Co. All Rights Reserved.**
+**Copyright (c) 2026 Ananth Ram. All Rights Reserved.**
 
 ---
 
 ### Ownership & Usage Restrictions
 
-1. **No Reproduction or Redistribution**:  
-   No part of this software, source code, design assets, branding, logos, graphics, or associated documentation may be copied, reproduced, distributed, modified, sublicensed, cloned, mirrored, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise) without the prior explicit written permission of the copyright owner (**Reverie Billiards Co.**).
+1. **Personal Portfolio & Exclusive Intellectual Property**:  
+   This software, full-stack application, source code, UI/UX design, branding, and associated documentation are the exclusive intellectual property and portfolio work of **Ananth Ram**.
 
-2. **No Commercial Exploitation**:  
-   Unauthorized commercial exploitation, resale, deployment, or reverse engineering of this project or its source code is strictly prohibited under international copyright laws and treaties.
+2. **No Reproduction or Redistribution**:  
+   No part of this software or repository may be copied, reproduced, distributed, modified, sublicensed, cloned, mirrored, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise) without the prior explicit written permission of **Ananth Ram**.
 
-3. **Public Viewing Notice**:  
-   Providing access to this repository on GitHub is solely for viewing purposes and does not grant any express or implied license to use, copy, modify, or distribute the codebase.
+3. **No Commercial Exploitation or Reuse**:  
+   Unauthorized copying, commercial exploitation, resale, deployment, template usage, or reverse engineering of this project or its source code by third parties is strictly prohibited under international copyright laws and treaties.
+
+4. **Public Portfolio Viewing Notice**:  
+   Providing access to this repository on GitHub is solely for recruiter, employer, and client portfolio review purposes, and does not grant any express or implied license to use, copy, modify, or distribute the codebase.
 
 ---
 
-*For inquiries or licensing permissions, please contact Reverie Billiards Co.*
+*For inquiries or permission requests, please contact Ananth Ram.*

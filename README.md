@@ -76,4 +76,5 @@ The website hosts an exclusive digital publication exploring the history and cra
 
 ---
 
-*© 2026 Reverie Billiards Co. All Rights Reserved. Engineered for Purists & Cueists.*
+*© 2026 Ananth Ram. All Rights Reserved. Created & Developed by Ananth Ram as a Full-Stack Portfolio Project.*
+

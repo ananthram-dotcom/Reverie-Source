@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useCart } from '../context/CartContext';
 import { MOCK_PRODUCTS } from '../data/mockData';
 import ProductCard from '../components/ProductCard';
-import { Star, ShoppingBag, ArrowLeft, Check, ShieldCheck, Truck, RefreshCw } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Star, ShoppingBag, ArrowLeft, Check, Truck, RefreshCw } from 'lucide-react';
 
 const ProductDetail = () => {
   const { slug } = useParams();
-  const navigate = useNavigate();
   const { addToCart } = useCart();
 
   const product = MOCK_PRODUCTS.find((p) => p.slug === slug) || MOCK_PRODUCTS[0];
@@ -18,7 +16,6 @@ const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState(product.image);
 
-  // Related products (excluding current)
   const relatedProducts = MOCK_PRODUCTS.filter((p) => p.id !== product.id).slice(0, 3);
 
   return (
@@ -28,12 +25,12 @@ const ProductDetail = () => {
         <meta name="description" content={product.description} />
       </Helmet>
 
-      <div className="pt-28 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <div className="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* Breadcrumb / Back Link */}
         <Link
           to="/products"
-          className="inline-flex items-center space-x-2 text-xs font-semibold text-reverie-brass hover:text-reverie-gold transition-colors uppercase tracking-wider"
+          className="inline-flex items-center space-x-2 text-xs font-bold text-reverie-brass hover:text-reverie-gold transition-colors uppercase tracking-wider bg-reverie-deep/40 px-4 py-2 rounded-lg border border-reverie-brass/30"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Merch Catalog</span>
@@ -44,7 +41,7 @@ const ProductDetail = () => {
           
           {/* Gallery Column */}
           <div className="lg:col-span-7 space-y-4">
-            <div className="aspect-square bg-reverie-darkwalnut/90 rounded-2xl border border-reverie-brass/30 overflow-hidden shadow-purple relative">
+            <div className="aspect-square bg-reverie-darkwalnut/90 rounded-2xl border-2 border-reverie-brass/40 overflow-hidden shadow-purple relative">
               <img
                 src={selectedImage}
                 alt={product.name}
@@ -67,7 +64,7 @@ const ProductDetail = () => {
                     className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${
                       selectedImage === img
                         ? 'border-reverie-brass scale-95 shadow-brass'
-                        : 'border-reverie-brass/20 opacity-60 hover:opacity-100'
+                        : 'border-reverie-brass/30 opacity-70 hover:opacity-100'
                     }`}
                   >
                     <img src={img} alt="Thumbnail" className="w-full h-full object-cover" />
@@ -78,9 +75,9 @@ const ProductDetail = () => {
           </div>
 
           {/* Details & Purchase Column */}
-          <div className="lg:col-span-5 space-y-6 bg-reverie-darkwalnut/80 p-8 rounded-2xl border border-reverie-brass/30 shadow-purple">
+          <div className="lg:col-span-5 space-y-6 bg-gradient-to-b from-reverie-darkwalnut via-reverie-deep/80 to-reverie-darkwalnut p-8 rounded-2xl border border-reverie-brass/40 shadow-purple">
             <div>
-              <span className="text-xs font-serif font-semibold text-reverie-brass tracking-widest uppercase block mb-1">
+              <span className="text-xs font-serif font-bold text-reverie-brass tracking-widest uppercase block mb-1">
                 {product.category}
               </span>
               <h1 className="text-3xl font-serif font-bold text-reverie-cream leading-tight">
@@ -94,22 +91,22 @@ const ProductDetail = () => {
                   <span className="font-bold text-reverie-cream">{product.rating}</span>
                 </div>
                 <span className="text-reverie-cream/40">•</span>
-                <span className="text-xs text-reverie-cream/70">
+                <span className="text-xs text-reverie-cream/80 font-medium">
                   {product.reviewsCount} Customer Reviews
                 </span>
               </div>
             </div>
 
             {/* Price */}
-            <div className="border-y border-reverie-brass/20 py-4">
-              <span className="text-xs text-reverie-cream/50 block">Price</span>
+            <div className="border-y border-reverie-brass/30 py-4">
+              <span className="text-xs text-reverie-cream/60 block font-medium">Item Price</span>
               <span className="text-3xl font-serif font-bold text-reverie-brass">
                 ${product.price.toFixed(2)}
               </span>
             </div>
 
             {/* Description */}
-            <p className="text-sm text-reverie-cream/80 leading-relaxed font-sans">
+            <p className="text-sm text-reverie-cream/90 leading-relaxed font-sans font-normal">
               {product.description}
             </p>
 
@@ -117,11 +114,8 @@ const ProductDetail = () => {
             {product.sizes && product.sizes.length > 0 && (
               <div className="space-y-2">
                 <div className="flex justify-between items-center text-xs">
-                  <span className="font-semibold text-reverie-brass uppercase tracking-wider">
+                  <span className="font-bold text-reverie-brass uppercase tracking-wider">
                     Select Size
-                  </span>
-                  <span className="text-reverie-cream/60 hover:text-reverie-brass cursor-pointer">
-                    Fit & Spec Guide
                   </span>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -129,10 +123,10 @@ const ProductDetail = () => {
                     <button
                       key={size}
                       onClick={() => setSelectedSize(size)}
-                      className={`px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                      className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                         selectedSize === size
                           ? 'bg-gradient-to-r from-reverie-brass to-reverie-gold text-reverie-darkwalnut shadow-brass'
-                          : 'bg-reverie-deep/50 border border-reverie-brass/30 text-reverie-cream hover:border-reverie-brass'
+                          : 'bg-reverie-deep/80 border border-reverie-brass/40 text-reverie-cream hover:border-reverie-brass'
                       }`}
                     >
                       {size}
@@ -144,17 +138,17 @@ const ProductDetail = () => {
 
             {/* Quantity Selector & Add to Cart */}
             <div className="flex items-center space-x-4 pt-2">
-              <div className="flex items-center bg-reverie-deep/60 border border-reverie-brass/30 rounded-xl px-3 py-2 space-x-3">
+              <div className="flex items-center bg-reverie-deep/90 border border-reverie-brass/40 rounded-xl px-3 py-2 space-x-3">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="text-reverie-cream/70 hover:text-reverie-brass font-bold text-base"
+                  className="text-reverie-cream/80 hover:text-reverie-brass font-bold text-base px-1"
                 >
                   -
                 </button>
                 <span className="text-sm font-bold text-reverie-cream px-2">{quantity}</span>
                 <button
                   onClick={() => setQuantity(quantity + 1)}
-                  className="text-reverie-cream/70 hover:text-reverie-brass font-bold text-base"
+                  className="text-reverie-cream/80 hover:text-reverie-brass font-bold text-base px-1"
                 >
                   +
                 </button>
@@ -171,14 +165,14 @@ const ProductDetail = () => {
 
             {/* Materials & Spec Checklist */}
             {product.details && (
-              <div className="pt-4 border-t border-reverie-brass/20 space-y-2">
+              <div className="pt-4 border-t border-reverie-brass/30 space-y-2">
                 <h4 className="text-xs font-serif font-bold text-reverie-brass uppercase tracking-wider">
                   Materials & Geometry Specs
                 </h4>
-                <ul className="space-y-1.5 text-xs text-reverie-cream/75">
+                <ul className="space-y-2 text-xs text-reverie-cream/85">
                   {product.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-center space-x-2">
-                      <Check className="w-3.5 h-3.5 text-reverie-brass flex-shrink-0" />
+                    <li key={idx} className="flex items-center space-x-2.5">
+                      <Check className="w-4 h-4 text-reverie-brass flex-shrink-0" />
                       <span>{detail}</span>
                     </li>
                   ))}
@@ -187,12 +181,12 @@ const ProductDetail = () => {
             )}
 
             {/* Shipping & Support badges */}
-            <div className="grid grid-cols-2 gap-3 pt-4 border-t border-reverie-brass/10 text-center">
-              <div className="p-3 bg-reverie-deep/30 rounded-lg border border-reverie-brass/10 text-[11px] text-reverie-cream/70">
+            <div className="grid grid-cols-2 gap-3 pt-4 border-t border-reverie-brass/20 text-center">
+              <div className="p-3 bg-reverie-deep/50 rounded-xl border border-reverie-brass/20 text-[11px] text-reverie-cream/80">
                 <Truck className="w-4 h-4 text-reverie-brass mx-auto mb-1" />
                 <span>Free Shipping over $75</span>
               </div>
-              <div className="p-3 bg-reverie-deep/30 rounded-lg border border-reverie-brass/10 text-[11px] text-reverie-cream/70">
+              <div className="p-3 bg-reverie-deep/50 rounded-xl border border-reverie-brass/20 text-[11px] text-reverie-cream/80">
                 <RefreshCw className="w-4 h-4 text-reverie-brass mx-auto mb-1" />
                 <span>30-Day Hassle-Free Exchange</span>
               </div>
@@ -203,13 +197,13 @@ const ProductDetail = () => {
         </div>
 
         {/* Related Products Grid */}
-        <div className="pt-12 border-t border-reverie-brass/20 space-y-8">
+        <div className="pt-12 border-t border-reverie-brass/30 space-y-8">
           <div className="flex justify-between items-end">
             <div>
-              <span className="text-xs font-serif font-semibold text-reverie-brass tracking-widest uppercase block mb-1">
+              <span className="text-xs font-serif font-bold text-reverie-brass tracking-widest uppercase block mb-1">
                 More from the Rack
               </span>
-              <h2 className="text-2xl font-serif font-bold text-reverie-cream">
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-reverie-cream">
                 Complementary Billiards Merch
               </h2>
             </div>

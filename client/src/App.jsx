@@ -19,7 +19,7 @@ function App() {
     <HelmetProvider>
       <CartProvider>
         <Router>
-          <div className="min-h-screen flex flex-col bg-reverie-ivory text-reverie-ink selection:bg-reverie-brass selection:text-reverie-darkwalnut">
+          <div className="min-h-screen flex flex-col bg-reverie-darkwalnut text-reverie-cream selection:bg-reverie-brass selection:text-reverie-darkwalnut">
             <Navbar />
             <CartDrawer />
             

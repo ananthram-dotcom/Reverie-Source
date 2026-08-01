@@ -15,12 +15,12 @@ const BlogDetail = () => {
         <meta name="description" content={post.excerpt} />
       </Helmet>
 
-      <article className="pt-28 pb-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <article className="pt-32 pb-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
         {/* Back Link */}
         <Link
           to="/blog"
-          className="inline-flex items-center space-x-2 text-xs font-semibold text-reverie-brass hover:text-reverie-gold transition-colors uppercase tracking-wider"
+          className="inline-flex items-center space-x-2 text-xs font-bold text-reverie-brass hover:text-reverie-gold transition-colors uppercase tracking-wider bg-reverie-deep/40 px-4 py-2 rounded-lg border border-reverie-brass/30"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Journal Entries</span>
@@ -28,14 +28,14 @@ const BlogDetail = () => {
 
         {/* Header Metadata */}
         <div className="space-y-4 text-center sm:text-left">
-          <span className="inline-block bg-reverie-deep border border-reverie-brass/40 text-reverie-brass text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md">
+          <span className="inline-block bg-reverie-deep border border-reverie-brass/50 text-reverie-brass text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md">
             {post.category}
           </span>
           <h1 className="text-3xl sm:text-5xl font-serif font-black text-reverie-cream leading-tight">
             {post.title}
           </h1>
 
-          <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-y border-reverie-brass/20 text-xs text-reverie-cream/70">
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-y border-reverie-brass/30 text-xs text-reverie-cream/80 font-medium">
             <div className="flex items-center space-x-4">
               <span className="font-serif italic text-reverie-brass">By {post.author}</span>
               <span>•</span>
@@ -52,7 +52,7 @@ const BlogDetail = () => {
 
             <button
               onClick={() => alert('Article link copied to clipboard!')}
-              className="flex items-center space-x-1.5 text-reverie-brass hover:text-reverie-gold transition-colors cursor-pointer"
+              className="flex items-center space-x-1.5 text-reverie-brass hover:text-reverie-gold transition-colors cursor-pointer font-bold"
             >
               <Share2 className="w-4 h-4" />
               <span>Share Article</span>
@@ -61,30 +61,30 @@ const BlogDetail = () => {
         </div>
 
         {/* Featured Image */}
-        <div className="aspect-[16/9] rounded-2xl overflow-hidden border border-reverie-brass/30 shadow-purple">
+        <div className="aspect-[16/9] rounded-2xl overflow-hidden border-2 border-reverie-brass/40 shadow-purple">
           <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
         </div>
 
         {/* Article Body */}
         <div
-          className="prose prose-invert max-w-none text-reverie-cream/85 font-sans leading-relaxed text-base space-y-6 [&_h3]:text-2xl [&_h3]:font-serif [&_h3]:font-bold [&_h3]:text-reverie-cream [&_blockquote]:border-l-4 [&_blockquote]:border-reverie-brass [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-reverie-brass [&_p.lead]:text-lg [&_p.lead]:text-reverie-cream"
+          className="prose prose-invert max-w-none text-reverie-cream/90 font-sans leading-relaxed text-base space-y-6 [&_h3]:text-2xl [&_h3]:font-serif [&_h3]:font-bold [&_h3]:text-reverie-cream [&_blockquote]:border-l-4 [&_blockquote]:border-reverie-brass [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-reverie-brass [&_p.lead]:text-lg [&_p.lead]:text-reverie-cream"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
         {/* Article Footer */}
-        <div className="pt-12 border-t border-reverie-brass/20 bg-reverie-darkwalnut/80 p-8 rounded-2xl border flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="pt-12 border-t border-reverie-brass/30 bg-gradient-to-r from-reverie-deep to-reverie-darkwalnut p-8 rounded-2xl border border-reverie-brass/40 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-purple">
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 rounded-full bg-reverie-deep border border-reverie-brass flex items-center justify-center text-reverie-brass">
+            <div className="w-12 h-12 rounded-full bg-reverie-deep border border-reverie-brass flex items-center justify-center text-reverie-brass shadow-brass">
               <Disc className="w-6 h-6" />
             </div>
             <div>
               <h4 className="font-serif font-bold text-reverie-cream text-base">Reverie Editorial Board</h4>
-              <p className="text-xs text-reverie-cream/60">Dedicated to preserving cue sports heritage & applied geometry.</p>
+              <p className="text-xs text-reverie-cream/70">Dedicated to preserving cue sports heritage & applied geometry.</p>
             </div>
           </div>
           <Link
             to="/products"
-            className="px-5 py-2.5 bg-reverie-brass text-reverie-darkwalnut font-bold text-xs rounded-lg hover:brightness-110 uppercase tracking-wider shadow-brass flex-shrink-0"
+            className="px-5 py-2.5 bg-gradient-to-r from-reverie-brass to-reverie-gold text-reverie-darkwalnut font-bold text-xs rounded-lg hover:brightness-110 uppercase tracking-wider shadow-brass flex-shrink-0"
           >
             Explore Reverie Merch
           </Link>

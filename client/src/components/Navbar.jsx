@@ -39,8 +39,8 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-reverie-darkwalnut/95 backdrop-blur-md py-3 shadow-purple border-b border-reverie-brass/30'
-          : 'bg-gradient-to-b from-reverie-darkwalnut/90 to-transparent py-5'
+          ? 'bg-reverie-darkwalnut/95 backdrop-blur-md py-3.5 shadow-purple border-b border-reverie-brass/40'
+          : 'bg-reverie-darkwalnut/90 backdrop-blur-md py-5 border-b border-reverie-brass/20'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,14 +48,14 @@ const Navbar = () => {
           
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-reverie-deep to-reverie-accent border border-reverie-brass/60 flex items-center justify-center shadow-brass group-hover:scale-105 transition-transform">
-              <Disc className="w-6 h-6 text-reverie-brass group-hover:rotate-45 transition-transform duration-500" />
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-reverie-deep to-reverie-accent border border-reverie-brass/80 flex items-center justify-center shadow-brass group-hover:scale-105 transition-transform">
+              <Disc className="w-5 h-5 text-reverie-brass group-hover:rotate-45 transition-transform duration-500" />
             </div>
             <div>
               <span className="font-serif text-2xl font-black tracking-widest text-reverie-cream group-hover:text-reverie-gold transition-colors block leading-none">
                 REVERIE
               </span>
-              <span className="text-[10px] tracking-[0.25em] text-reverie-brass uppercase font-sans font-semibold block mt-1">
+              <span className="text-[10px] tracking-[0.25em] text-reverie-brass uppercase font-sans font-bold block mt-1">
                 Precision Billiards
               </span>
             </div>
@@ -69,15 +69,15 @@ const Navbar = () => {
                 to={link.path}
                 className={`relative text-sm font-medium tracking-wide transition-colors py-1 ${
                   isActive(link.path)
-                    ? 'text-reverie-brass font-semibold'
-                    : 'text-reverie-cream/80 hover:text-reverie-brass'
+                    ? 'text-reverie-brass font-bold'
+                    : 'text-reverie-cream/85 hover:text-reverie-brass'
                 }`}
               >
                 {link.name}
                 {isActive(link.path) && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-reverie-brass to-reverie-gold rounded-full"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-reverie-brass via-reverie-gold to-reverie-brass rounded-full"
                   />
                 )}
               </Link>
@@ -88,12 +88,12 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative p-2.5 bg-reverie-deep/50 border border-reverie-brass/40 rounded-full text-reverie-cream hover:border-reverie-brass hover:bg-reverie-deep transition-all shadow-brass group cursor-pointer"
+              className="relative p-2.5 bg-reverie-deep/80 border border-reverie-brass/60 rounded-full text-reverie-cream hover:border-reverie-gold hover:bg-reverie-deep transition-all shadow-brass group cursor-pointer"
               aria-label="Open Shopping Bag"
             >
               <ShoppingBag className="w-5 h-5 text-reverie-brass group-hover:scale-110 transition-transform" />
               {totalItems > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-gradient-to-r from-reverie-brass to-reverie-gold text-reverie-darkwalnut text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-pulse">
+                <span className="absolute -top-1.5 -right-1.5 bg-gradient-to-r from-reverie-brass to-reverie-gold text-reverie-darkwalnut text-[11px] font-extrabold w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-pulse">
                   {totalItems}
                 </span>
               )}
@@ -118,17 +118,17 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-reverie-darkwalnut border-b border-reverie-brass/30 px-4 pt-4 pb-6 space-y-3"
+            className="md:hidden bg-reverie-darkwalnut border-b border-reverie-brass/40 px-4 pt-4 pb-6 space-y-3"
           >
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block py-2 text-base font-serif tracking-wide border-b border-reverie-brass/10 ${
+                className={`block py-2.5 text-base font-serif tracking-wide border-b border-reverie-brass/15 ${
                   isActive(link.path)
-                    ? 'text-reverie-brass font-bold pl-2 border-l-2 border-l-reverie-brass'
-                    : 'text-reverie-cream/80 hover:text-reverie-brass'
+                    ? 'text-reverie-brass font-bold pl-3 border-l-4 border-l-reverie-brass bg-reverie-deep/30'
+                    : 'text-reverie-cream/90 hover:text-reverie-brass'
                 }`}
               >
                 {link.name}

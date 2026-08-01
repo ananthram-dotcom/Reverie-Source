@@ -49,7 +49,7 @@ const ChatbotWidget = () => {
     setIsTyping(true);
 
     try {
-      const API_URL = import.meta.env.VITE_API_URL || '';
+      const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:5000' : '');
       const response = await fetch(`${API_URL}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -67,35 +67,31 @@ const ChatbotWidget = () => {
         const botReply = {
           id: (Date.now() + 1).toString(),
           sender: 'bot',
-          text: data.reply || "I am always here to assist with Reverie billiards inquiries.",
+          text: data.reply || "Greetings! How may I assist you with Reverie billiards merchandise today?",
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         };
         setMessages((prev) => [...prev, botReply]);
       } else {
-        setTimeout(() => {
-          let replyText = "At Reverie, every garment is measured with the precision of a 3-rail bank shot. For sizing recommendations, our French Terry hoodies feature a structured, relaxed drape.";
-          
-          const lower = query.toLowerCase();
-          if (lower.includes('size') || lower.includes('fit')) {
-            replyText = "Our hoodies and crewnecks feature a relaxed vintage fit. If you prefer a tailored look, we recommend true-to-size; for a classic oversized 90s drop, size up one step!";
-          } else if (lower.includes('story') || lower.includes('history') || lower.includes('about')) {
-            replyText = "Reverie was born from an obsession with vintage 1920s billiards halls, where precision geometry met timeless style. We pair deep purple tones with cream, brass, and felt green aesthetics.";
-          } else if (lower.includes('bestseller') || lower.includes('recommend') || lower.includes('top')) {
-            replyText = "Our #1 most coveted drop is 'The Cueist Heavyweight French Terry Hoodie' paired with the 1928 Solid Brass 8-Ball Keyring!";
-          }
+        let replyText = "At Reverie, every garment is crafted with the precision of a 3-rail bank shot. For sizing, our French Terry hoodies feature a structured, relaxed drape.";
+        
+        const lower = query.toLowerCase();
+        if (lower.includes('size') || lower.includes('fit') || lower.includes('hoodie')) {
+          replyText = "Our hoodies and crewnecks feature a relaxed vintage fit. For a tailored silhouette, order true to size. For an oversized 90s drop shoulder look, size up one step!";
+        } else if (lower.includes('story') || lower.includes('history') || lower.includes('about')) {
+          replyText = "Reverie was born from an obsession with vintage 1920s billiards halls, where precision geometry met timeless style. We combine deep felt green, cream, solid brass, and purple silk embroidery.";
+        } else if (lower.includes('bestseller') || lower.includes('recommend') || lower.includes('top')) {
+          replyText = "Our #1 most coveted drop is 'The Cueist Heavyweight French Terry Hoodie' ($88.00) paired with the 1928 Solid Brass 8-Ball Keyring ($36.00)! Free shipping on orders over $75.";
+        }
 
-          setMessages((prev) => [
-            ...prev,
-            {
-              id: (Date.now() + 1).toString(),
-              sender: 'bot',
-              text: replyText,
-              timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-            }
-          ]);
-          setIsTyping(false);
-        }, 600);
-        return;
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: (Date.now() + 1).toString(),
+            sender: 'bot',
+            text: replyText,
+            timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+          }
+        ]);
       }
     } catch (err) {
       setMessages((prev) => [
@@ -103,7 +99,7 @@ const ChatbotWidget = () => {
         {
           id: (Date.now() + 1).toString(),
           sender: 'bot',
-          text: "I am having trouble connecting to the rack right now. Please reach out to our concierge via the Contact section below!",
+          text: "I am having trouble connecting to the server right now. Please check back shortly or reach out via our Contact section below!",
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         }
       ]);
